@@ -1,0 +1,6 @@
+{
+  "name": "CryptoBlog - Cryptocurrency Info & Insights",
+  "description": "Production-grade cryptocurrency info blog featuring institutional market research, educational crypto analysis, and compliant AdSense architecture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CryptoBlog - Institutional Cryptocurrency Research &amp; Market Intelligence</title>
+  <meta name="description" content="Discover institutional-grade cryptocurrency research, on-chain analytics, macro Bitcoin liquidity models, and educational decentralized finance deep dives on CryptoBlog." />
+  <meta property="og:title" content="CryptoBlog - Institutional Cryptocurrency Research & Markets" />
+  <meta property="og:description" content="Discover institutional-grade cryptocurrency research, on-chain analytics, macro Bitcoin liquidity models, and educational decentralized finance deep dives." />
+  <meta property="og:type" content="website" />
+  <style>
+    /* RESET & GLOBAL CORE PALETTE */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f7f9fb;
+      color: #2d3748;
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a {
+      color: #3182ce;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: #2b6cb0;
+      text-decoration: underline;
+    }
+
+    /* HEADER & NAVIGATION */
+    header.site-header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #1a365d;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+    .brand-logo:hover {
+      text-decoration: none;
+      color: #2b6cb0;
+    }
+    nav.header-nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    nav.header-nav a {
+      color: #4a5568;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    nav.header-nav a:hover, nav.header-nav a.active {
+      color: #3182ce;
+      background-color: #ebf8ff;
+    }
+
+    /* HEADER SEARCH BAR */
+    .header-search-form {
+      display: flex;
+      align-items: center;
+      position: relative;
+      flex: 0 1 290px;
+      margin: 0 12px;
+    }
+    .header-search-input {
+      width: 100%;
+      padding: 7px 36px 7px 14px;
+      font-size: 0.9rem;
+      border: 1px solid #cbd5e0;
+      border-radius: 20px;
+      background-color: #f8fafc;
+      color: #2d3748;
+      outline: none;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .header-search-input:focus {
+      background-color: #ffffff;
+      border-color: #3182ce;
+      box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+    }
+    .header-search-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #718096;
+      transition: color 0.2s ease;
+    }
+    .header-search-btn:hover {
+      color: #3182ce;
+    }
+
+    /* TOP LEADERBOARD AD ZONE */
+    .leaderboard-wrapper {
+      max-width: 1200px;
+      margin: 18px auto 6px auto;
+      padding: 0 16px;
+    }
+    .ad-leaderboard-container {
+      width: 100%;
+      max-width: 728px;
+      min-height: 90px;
+      margin: 0 auto;
+      background-color: #edf2f7;
+      border: 1px dashed #cbd5e0;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      text-align: center;
+    }
+    .ad-badge {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #718096;
+      margin-bottom: 4px;
+    }
+    .ad-specs {
+      font-size: 13px;
+      color: #4a5568;
+      font-weight: 600;
+    }
+
+    /* 3-COLUMN DESKTOP ARCHITECTURE (CONTAINER: 1200px) */
+    .layout-container {
+      max-width: 1200px;
+      margin: 20px auto 40px auto;
+      padding: 0 16px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    /* FIXED STICKY SKYSCRAPERS (160px) */
+    .sidebar-skyscraper {
+      width: 160px;
+      flex-shrink: 0;
+    }
+    .sticky-ad-box {
+      position: sticky;
+      top: 90px;
+      width: 160px;
+      height: 600px;
+      background-color: #edf2f7;
+      border: 1px dashed #cbd5e0;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 8px;
+      text-align: center;
+    }
+    .skyscraper-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #718096;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    .skyscraper-dimensions {
+      font-size: 13px;
+      font-weight: 600;
+      color: #4a5568;
+    }
+
+    /* CENTER FLUID MAIN FEED COLUMN */
+    main.center-column {
+      flex: 1;
+      min-width: 0;
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 32px 36px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    }
+
+    /* HOMEPAGE HERO INTRODUCTION */
+    .feed-header {
+      border-bottom: 2px solid #edf2f7;
+      padding-bottom: 20px;
+      margin-bottom: 32px;
+    }
+    .feed-header h1 {
+      font-size: 1.95rem;
+      font-weight: 800;
+      color: #1a202c;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+    .feed-header p {
+      font-size: 0.98rem;
+      color: #718096;
+    }
+
+    /* ARTICLE CARDS - STRICT 7-ELEMENT SPECIFICATION */
+    .article-card {
+      padding-bottom: 32px;
+      margin-bottom: 36px;
+      border-bottom: 1px solid #edf2f7;
+    }
+    .article-card:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    /* 1. TITLE */
+    .article-card h2 {
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+    .article-card h2 a {
+      color: #2d3748;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .article-card h2 a:hover {
+      color: #3182ce;
+      text-decoration: underline;
+    }
+
+    /* 2. META METADATA */
+    .article-meta {
+      font-size: 0.88rem;
+      color: #718096;
+      margin-bottom: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .category-tag {
+      background-color: #edf2f7;
+      color: #4a5568;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* 3. IMAGE ELEMENT */
+    .article-image-container {
+      width: 100%;
+      height: 270px;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 14px;
+      background-color: #edf2f7;
+      border: 1px solid #e2e8f0;
+    }
+    .article-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .article-card:hover .article-img {
+      transform: scale(1.02);
+    }
+
+    /* 4. EXCERPT */
+    .article-excerpt {
+      font-size: 0.98rem;
+      color: #4a5568;
+      line-height: 1.65;
+      margin-bottom: 18px;
+      text-align: justify;
+    }
+
+    /* 5. IN-FEED AD UNIT SLOT */
+    .in-feed-ad-slot {
+      width: 100%;
+      min-height: 90px;
+      background-color: #fafbfc;
+      border: 1px dashed #cbd5e0;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      text-align: center;
+    }
+    .in-feed-ad-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #718096;
+      margin-bottom: 4px;
+    }
+    .in-feed-ad-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: #4a5568;
+    }
+
+    /* 6. MANDATORY 25PX SAFETY CLICK BUFFER SPACER */
+    .safety-click-buffer {
+      height: 25px;
+      width: 100%;
+      display: block;
+    }
+
+    /* 7. ACTION BUTTON */
+    .read-more-btn {
+      display: inline-block;
+      background-color: #3182ce;
+      color: #ffffff;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-size: 0.94rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+    .read-more-btn:hover {
+      background-color: #2b6cb0;
+      color: #ffffff;
+      text-decoration: none;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(49, 130, 206, 0.2);
+    }
+    .read-more-btn:active {
+      transform: translateY(0);
+    }
+
+    /* FOOTER & BOTTOM AD ZONES */
+    footer.site-footer {
+      background-color: #1a365d;
+      color: #e2e8f0;
+      padding: 40px 24px 30px 24px;
+      border-top: 1px solid #2a4365;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .footer-logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 18px 0 24px 0;
+    }
+    .footer-links a {
+      color: #cbd5e0;
+      font-size: 0.92rem;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    .footer-copy {
+      font-size: 0.88rem;
+      color: #a0aec0;
+      margin-bottom: 24px;
+    }
+
+    /* FOOTER ANCHOR AD UNIT */
+    .footer-anchor-ad-container {
+      max-width: 728px;
+      min-height: 90px;
+      margin: 0 auto;
+      background-color: #2a4365;
+      border: 1px dashed #4a5568;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      text-align: center;
+    }
+    .footer-anchor-ad-container .ad-badge {
+      color: #e2e8f0;
+    }
+    .footer-anchor-ad-container .ad-specs {
+      color: #ffffff;
+    }
+
+    /* RESPONSIVE BREAKPOINT - MOBILE & TABLET REFLOW (<= 992px) */
+    @media (max-width: 992px) {
+      .sidebar-skyscraper {
+        display: none !important;
+      }
+      .header-inner {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .header-search-form {
+        order: 3;
+        flex: 1 1 100%;
+        margin: 6px 0 0 0;
+      }
+      .layout-container {
+        padding: 0 16px;
+        margin: 16px auto;
+      }
+      main.center-column {
+        width: 100%;
+        padding: 24px 18px;
+      }
+      .article-card h2 a {
+        font-size: 1.25rem;
+      }
+      .article-image-container {
+        height: 200px;
+      }
+      .ad-leaderboard-container {
+        max-width: 100%;
+        min-height: 60px;
+        padding: 8px;
+      }
+      .ad-specs {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="logo.svg" alt="Cryptinff Logo" width="34" height="34" style="border-radius: 6px; display: block;" />
+        <span style="font-size: 1.45rem; font-weight: 800; color: #1a365d; letter-spacing: -0.5px;">Cryptinff</span>
+      </a>
+
+      <!-- HEADER SEARCH BAR (TOPIC FILTER) -->
+      <form class="header-search-form" id="headerSearchForm" action="index.html" method="get" onsubmit="handleHeaderSearch(event)">
+        <input 
+          type="search" 
+          id="headerSearchInput" 
+          name="q" 
+          class="header-search-input" 
+          placeholder="Search topics, tokens, guides..." 
+          aria-label="Search articles" 
+          autocomplete="off" 
+        />
+        <button type="submit" class="header-search-btn" aria-label="Submit search">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </form>
+
+      <nav class="header-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="article.html">Guides</a>
+        <a href="index.html">Markets</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- TOP LEADERBOARD AD INSERTION ZONE -->
+  <div class="leaderboard-wrapper">
+    <div class="ad-leaderboard-container">
+      <div class="ad-badge">Advertisement</div>
+      <div class="ad-specs">[GOOGLE ADSENSE - RESPONSIVE LEADERBOARD AD 728x90 / 320x50]</div>
+    </div>
+  </div>
+
+  <!-- 3-COLUMN ARCHITECTURE -->
+  <div class="layout-container">
+
+    <!-- LEFT STICKY SKYSCRAPER AD CONTAINER (160x600) -->
+    <aside class="sidebar-skyscraper">
+      <div class="sticky-ad-box">
+        <div class="skyscraper-label">Advertisement</div>
+        <div class="skyscraper-dimensions">[GOOGLE ADSENSE - VERTICAL SKYSCRAPER AD 160x600]</div>
+      </div>
+    </aside>
+
+    <!-- CENTER FLUID MAIN CONTENT COLUMN: EXACTLY 20 ARTICLES -->
+    <main class="center-column">
+      <div class="feed-header">
+        <h1>Latest Cryptocurrency Intelligence &amp; Market Research</h1>
+        <p>In-depth, peer-reviewed educational analysis covering global macro liquidity, L2 scaling, and decentralized economics.</p>
+      </div>
+
+      <!-- LIVE SEARCH FILTER STATUS BAR -->
+      <div id="searchFilterStatus" style="display: none; background-color: #ebf8ff; border: 1px solid #bee3f8; border-radius: 6px; padding: 12px 18px; margin-bottom: 24px; align-items: center; justify-content: space-between; font-size: 0.94rem; color: #2b6cb0;">
+        <span id="searchFilterText"></span>
+        <button id="clearSearchBtn" type="button" style="background: none; border: none; color: #3182ce; font-weight: 700; cursor: pointer; text-decoration: underline; font-size: 0.9rem;" onclick="clearSearchFilter()">Clear Search</button>
+      </div>
+
+      <!-- NO RESULTS PLACEHOLDER -->
+      <div id="noResultsBox" style="display: none; text-align: center; padding: 48px 20px; background-color: #f7fafc; border-radius: 8px; border: 1px dashed #cbd5e0; margin-bottom: 28px;">
+        <div style="font-size: 2.2rem; margin-bottom: 12px;">🔍</div>
+        <h3 style="font-size: 1.3rem; color: #2d3748; margin-bottom: 8px; font-weight: 700;">No articles matched your search</h3>
+        <p style="color: #718096; max-width: 440px; margin: 0 auto 18px auto; font-size: 0.95rem;">We couldn't find any crypto guides or market analysis matching your query. Try searching for terms like "Bitcoin", "Solana", "DeFi", or "Layer-2".</p>
+        <button type="button" class="read-more-btn" onclick="clearSearchFilter()">View All 20 Articles</button>
+      </div>
+
+      <!-- ARTICLE 1 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=1">Bitcoin Macro Trends &amp; Global Liquidity Cycles: Analyzing On-Chain SOPR and MVRV Ratios</a></h2>
+        <div class="article-meta">
+          <span>Oct 6, 2026</span>
+          <span>•</span>
+          <span class="category-tag">Macro Markets</span>
+          <span>•</span>
+          <span>8 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Bitcoin Macro Trends and Liquidity Cycles" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          Comprehensive on-chain quantitative analysis revealing how global central bank M2 liquidity velocity, institutional CME futures basis premiums, and spent output profit ratios delineate sustainable multi-quarter accumulation regimes across primary exchanges.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=1" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 2 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=2">Ethereum Layer-2 Scaling Wars: Rollups, Calldata Compression, and Blob Space Economics</a></h2>
+        <div class="article-meta">
+          <span>Oct 6, 2026</span>
+          <span>•</span>
+          <span class="category-tag">Ethereum &amp; L2</span>
+          <span>•</span>
+          <span>7 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80" alt="Ethereum Layer-2 Scaling Wars and Data Blobs" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          Deconstructing the post-danksharding execution dynamics across optimistic and ZK-rollup ecosystems as localized blob space fee markets slash calldata posting overhead by over ninety percent across decentralized exchanges.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=2" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 3 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=3">Solana Ecosystem Breakouts: High-Throughput Firedancer Client and Parallelized VM Efficiency</a></h2>
+        <div class="article-meta">
+          <span>Oct 5, 2026</span>
+          <span>•</span>
+          <span class="category-tag">Layer-1 Networks</span>
+          <span>•</span>
+          <span>6 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=800&q=80" alt="Solana Parallel Execution and Firedancer Client" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          An in-depth architectural breakdown of multi-threaded transaction pipelines, localized priority fee mechanisms, and the C++ Firedancer validator client pushing network throughput toward hardware-limited physical thresholds.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=3" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 4 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=4">Ripple SEC Regulation Updates: Institutional Cross-Border Settlement and Legal Precedents</a></h2>
+        <div class="article-meta">
+          <span>Oct 5, 2026</span>
+          <span>•</span>
+          <span class="category-tag">Regulation &amp; Law</span>
+          <span>•</span>
+          <span>5 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="Cryptocurrency Regulation and Court Precedents" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          Evaluating the judicial ramifications of programmatic token distribution rulings on institutional liquidity corridors, Automated Market Makers on XRPL, and statutory clarity for digital commodity designations across international jurisdictions.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=4" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 5 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=5">AI Agent Tokens &amp; Decentralized Compute: Decentralized GPU Clustering and Machine Economies</a></h2>
+        <div class="article-meta">
+          <span>Oct 4, 2026</span>
+          <span>•</span>
+          <span class="category-tag">AI &amp; DePIN</span>
+          <span>•</span>
+          <span>6 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="Artificial Intelligence Compute Clusters and Blockchain" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          Examining the convergence of decentralized physical compute grids and autonomous cryptographic agents utilizing on-chain micropayments to lease verifiable GPU inference clusters and machine learning models without centralized gatekeepers.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=5" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 6 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=6">DeFi Staking Strategies: Restaking Yields, Liquid Staking Tokens, and Slashing Vector Mechanics</a></h2>
+        <div class="article-meta">
+          <span>Oct 4, 2026</span>
+          <span>•</span>
+          <span class="category-tag">DeFi Analytics</span>
+          <span>•</span>
+          <span>7 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80" alt="Decentralized Finance Yield Curves and Staking" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          A deep mathematical risk audit of EigenLayer actively validated services, compounding staking incentives, liquidity de-pegging hazards, and cascading slashing condition vectors across major proof-of-stake validator infrastructures.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=6" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 7 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=7">Stablecoin De-Pegging Risks: Algorithmic Vulnerabilities, Treasury Backing, and Fiat Collateral Health</a></h2>
+        <div class="article-meta">
+          <span>Oct 3, 2026</span>
+          <span>•</span>
+          <span class="category-tag">Stablecoins</span>
+          <span>•</span>
+          <span>6 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80" alt="Stablecoin Reserve Collateral and Treasuries" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          Stress-testing centralized reserve transparency versus delta-neutral synthetic stablecoins under turbulent macro liquidity conditions, counterparty redemption runs, and real-time on-chain collateral audit mechanisms.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=7" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 8 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=8">Web3 Gaming Realities: Play-to-Own Tokenomics, Account Abstraction, and Player Retention</a></h2>
+        <div class="article-meta">
+          <span>Oct 3, 2026</span>
+          <span>•</span>
+          <span class="category-tag">Web3 Gaming</span>
+          <span>•</span>
+          <span>5 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="Web3 Video Games and Digital Asset Ownership" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          Transitioning past inflationary token emission traps toward frictionless ERC-4337 smart contract session keys, gas-free transaction relayers, and sustainable game loop economies driven by authentic player ownership.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=8" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 9 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=9">Cross-Chain Bridges &amp; Interoperability: Zero-Knowledge Relayers vs Trust-Minimized Message Passing</a></h2>
+        <div class="article-meta">
+          <span>Oct 2, 2026</span>
+          <span>•</span>
+          <span class="category-tag">Interoperability</span>
+          <span>•</span>
+          <span>7 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Blockchain Network Infrastructure and Cross-Chain Bridges" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          Analyzing cryptographic state validation paradigms across LayerZero, IBC, and ZK light clients to eliminate multisig honeypots that historically subjected cross-chain capital pools to catastrophic liquidity exploits.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=9" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 10 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=10">Institutional Web3 Adoption: Spot ETF Inflows, Corporate Balance Sheet Holdings, and Custody Architecture</a></h2>
+        <div class="article-meta">
+          <span>Oct 2, 2026</span>
+          <span>•</span>
+          <span class="category-tag">Institutional Desk</span>
+          <span>•</span>
+          <span>6 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Institutional Finance and Asset Custody Architecture" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          Tracking the cumulative absorption rate of physical spot Bitcoin and Ethereum exchange-traded funds, qualified multi-party computation cold storage custody, and corporate treasury capital allocations across Wall Street firms.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=10" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 11 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=11">Zero-Knowledge Cryptography: zk-SNARKs and zk-STARKs Revolutionizing Privacy and L1 Throughput</a></h2>
+        <div class="article-meta">
+          <span>Oct 1, 2026</span>
+          <span>•</span>
+          <span class="category-tag">Cryptography</span>
+          <span>•</span>
+          <span>8 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Zero-Knowledge Cryptography and Mathematical Proofs" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          A mathematical deep dive into arithmetic circuits, polynomial commitments, and recursion schemes powering succinct state proofs that verify complex multi-party blockchain computations in milliseconds without leaking sensitive inputs.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=11" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 12 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=12">Decentralized Physical Infrastructure Networks (DePIN): Tokenized Wireless Networks and Sensor Grids</a></h2>
+        <div class="article-meta">
+          <span>Oct 1, 2026</span>
+          <span>•</span>
+          <span class="category-tag">DePIN Infrastructure</span>
+          <span>•</span>
+          <span>5 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Decentralized Physical Infrastructure Networks" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          Evaluating the capital expenditure efficiency of community-deployed cellular base stations, decentralized IoT telemetry collectors, and geospatial mapping networks incentivized through cryptographic token reward schedules.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=12" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 13 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=13">Modular vs Monolithic Blockchains: Execution, Settlement, Data Availability, and Consensus Layers</a></h2>
+        <div class="article-meta">
+          <span>Sep 30, 2026</span>
+          <span>•</span>
+          <span class="category-tag">System Architecture</span>
+          <span>•</span>
+          <span>7 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Server Clusters and Modular Blockchain Architecture" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          Dissecting the fundamental trade-offs between unbundled modular stacks utilizing Celestia and EigenDA versus vertically integrated high-speed monolithic runtimes optimized for sub-second atomic composability.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=13" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 14 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=14">Bitcoin Runes and BRC-20 Ecosystem: Ordinals Inscriptions and UTXO Bloat Mitigation Strategies</a></h2>
+        <div class="article-meta">
+          <span>Sep 30, 2026</span>
+          <span>•</span>
+          <span class="category-tag">Bitcoin Protocols</span>
+          <span>•</span>
+          <span>6 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1516245834210-c4c142787335?auto=format&fit=crop&w=800&q=80" alt="Bitcoin Ordinals and UTXO Transactions" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          Investigating the evolutionary upgrade from witness data inscriptions to efficient OP_RETURN-based token balances, assessing miner fee revenue spikes and long-term unspent transaction output memory bloat management.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=14" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 15 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=15">Decentralized Derivatives &amp; Perpetual DEXs: Virtual AMMs, Funding Rates, and Order Book Matching</a></h2>
+        <div class="article-meta">
+          <span>Sep 29, 2026</span>
+          <span>•</span>
+          <span class="category-tag">Derivatives &amp; DEX</span>
+          <span>•</span>
+          <span>7 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=800&q=80" alt="Derivatives Market Order Books and Perpetual Contracts" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          Dissecting the quantitative mechanics of off-chain order book matching engines with on-chain settlement, dynamic borrowing fee curves, and institutional risk liquidation algorithms in decentralized perpetual markets.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=15" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 16 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=16">Central Bank Digital Currencies (CBDCs): Programmable Money and Threats to Financial Privacy</a></h2>
+        <div class="article-meta">
+          <span>Sep 29, 2026</span>
+          <span>•</span>
+          <span class="category-tag">Macro &amp; Policy</span>
+          <span>•</span>
+          <span>6 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1565372195458-9de0b320ef04?auto=format&fit=crop&w=800&q=80" alt="Central Bank Currencies and Sovereign Digital Money" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          A critical policy examination of sovereign digital currencies, zero-knowledge privacy defenses, and the stark architectural divergence between state-controlled surveillance ledger systems and permissionless blockchains.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=16" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 17 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=17">Real-World Asset (RWA) Tokenization: Treasury Bills, Commercial Real Estate, and Private Credit on Chain</a></h2>
+        <div class="article-meta">
+          <span>Sep 28, 2026</span>
+          <span>•</span>
+          <span class="category-tag">RWA Tokenization</span>
+          <span>•</span>
+          <span>7 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Real-World Asset Tokenization and Bond Portfolios" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          Analyzing the migration of off-chain short-term US Treasury yields and institutional credit facilities onto public blockchains via compliant regulatory wrappers, permissioned liquidity pools, and automated oracle feeds.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=17" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 18 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=18">Smart Contract Security Audits: Reentrancy Exploits, Flash Loan Attacks, and Formal Verification</a></h2>
+        <div class="article-meta">
+          <span>Sep 28, 2026</span>
+          <span>•</span>
+          <span class="category-tag">Cybersecurity</span>
+          <span>•</span>
+          <span>8 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Code Security Audits and Vulnerability Analysis" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          A rigorous technical cataloging of adversarial bytecode exploitation vectors, EVM call stack depths, automated property-based fuzzing harnesses, and mathematical formal verification protocols protecting billions in TVL.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=18" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 19 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=19">Crypto Tax Compliance &amp; Regulatory Reporting: Cost Basis Accounting, Capital Gains, and Global Tax Rules</a></h2>
+        <div class="article-meta">
+          <span>Sep 27, 2026</span>
+          <span>•</span>
+          <span class="category-tag">Tax &amp; Compliance</span>
+          <span>•</span>
+          <span>6 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80" alt="Tax Compliance and Financial Accounting Spreadsheets" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          Navigating the complexities of FIFO versus specific identification accounting methods, cross-chain bridge transaction taxable classification, and the OECD Crypto-Asset Reporting Framework for institutional digital portfolios.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=19" class="read-more-btn">Read More</a>
+      </article>
+
+      <!-- ARTICLE 20 -->
+      <article class="article-card">
+        <h2><a href="article.html?id=20">Governance DAOs &amp; Quadratic Voting: Sybil Resistance, Delegate Incentives, and Protocol Upgrades</a></h2>
+        <div class="article-meta">
+          <span>Sep 27, 2026</span>
+          <span>•</span>
+          <span class="category-tag">DAO Governance</span>
+          <span>•</span>
+          <span>6 min read</span>
+        </div>
+        <div class="article-image-container">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Decentralized Autonomous Organizations and Governance Decisions" class="article-img" loading="lazy" />
+        </div>
+        <p class="article-excerpt">
+          Exploring algorithmic governance design paradigms that mitigate plutocratic token voting monopolies through quadratic funding equations, decentralized identity verifications, and active timelocks for protocol upgrades.
+        </p>
+        <div class="in-feed-ad-slot">
+          <div class="in-feed-ad-label">Advertisement</div>
+          <div class="in-feed-ad-text">[GOOGLE ADSENSE - RESPONSIVE IN-FEED AD CONTAINER]</div>
+        </div>
+        <div class="safety-click-buffer"></div>
+        <a href="article.html?id=20" class="read-more-btn">Read More</a>
+      </article>
+
+    </main>
+
+    <!-- RIGHT STICKY SKYSCRAPER AD CONTAINER (160x600) -->
+    <aside class="sidebar-skyscraper">
+      <div class="sticky-ad-box">
+        <div class="skyscraper-label">Advertisement</div>
+        <div class="skyscraper-dimensions">[GOOGLE ADSENSE - VERTICAL SKYSCRAPER AD 160x600]</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- FOOTER SECTION -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px;">
+        <img src="logo.svg" alt="Cryptinff Logo" width="30" height="30" style="border-radius: 6px; display: block;" />
+        <span style="font-size: 1.4rem; font-weight: 800; color: #ffffff;">Cryptinff</span>
+      </div>
+      <p style="max-width: 650px; margin: 0 auto; font-size: 0.9rem; color: #cbd5e0;">
+        Independent institutional-grade cryptocurrency research, real-time blockchain analytics, and macro digital asset insights.
+      </p>
+      
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="article.html">Single Article</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <!-- BUSINESS EMAIL DEPLOYMENT & TRUST VERIFICATION NOTE (RULE 1) -->
+      <div style="margin: 14px 0 10px 0; font-size: 0.92rem; color: #cbd5e0;">
+        <span>Direct Inquiries: </span>
+        <a href="mailto:support@cryptinff.com" style="color: #63b3ed; font-weight: 600; text-decoration: none;">support@cryptinff.com</a>
+        <span style="margin: 0 8px; color: #718096;">•</span>
+        <a href="mailto:contactt@cryptinff.com" style="color: #63b3ed; font-weight: 600; text-decoration: none;">contactt@cryptinff.com</a>
+      </div>
+      <p style="font-size: 0.84rem; color: #a0aec0; max-width: 720px; margin: 0 auto 18px auto; line-height: 1.5;">
+        Official administrative correspondence for Cryptinff Media Network is handled exclusively through our encrypted domain servers at cryptinff.com.
+      </p>
+
+      <div class="footer-copy">
+        &copy; 2026 Cryptinff Media Network. All Rights Reserved. Fully compliant with Google AdSense Publisher Guidelines.
+      </div>
+
+      <!-- FOOTER / ANCHOR AD UNIT SLOT CONTAINER -->
+      <div class="footer-anchor-ad-container">
+        <div class="ad-badge">Advertisement</div>
+        <div class="ad-specs">[GOOGLE ADSENSE - RESPONSIVE FOOTER ANCHOR AD UNIT]</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT: PERSIST SELECTED ARTICLE ID & SEARCH TOPIC FILTER -->
+  <script>
+    function filterArticles(query) {
+      const q = (query || '').trim().toLowerCase();
+      const cards = document.querySelectorAll('.article-card');
+      const statusBox = document.getElementById('searchFilterStatus');
+      const statusText = document.getElementById('searchFilterText');
+      const noResultsBox = document.getElementById('noResultsBox');
+      const searchInputs = document.querySelectorAll('.header-search-input');
+
+      searchInputs.forEach(function (input) {
+        if (input.value !== query) {
+          input.value = query;
+        }
+      });
+
+      let matchCount = 0;
+
+      cards.forEach(function (card) {
+        const title = (card.querySelector('h2') ? card.querySelector('h2').textContent : '').toLowerCase();
+        const excerpt = (card.querySelector('.article-excerpt') ? card.querySelector('.article-excerpt').textContent : '').toLowerCase();
+        const category = (card.querySelector('.category-tag') ? card.querySelector('.category-tag').textContent : '').toLowerCase();
+
+        if (!q || title.includes(q) || excerpt.includes(q) || category.includes(q)) {
+          card.style.display = '';
+          matchCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (q) {
+        statusBox.style.display = 'flex';
+        statusText.innerHTML = 'Showing <strong>' + matchCount + '</strong> of <strong>' + cards.length + '</strong> articles matching "<strong>' + escapeHtml(q) + '</strong>"';
+        if (matchCount === 0) {
+          noResultsBox.style.display = 'block';
+        } else {
+          noResultsBox.style.display = 'none';
+        }
+      } else {
+        statusBox.style.display = 'none';
+        noResultsBox.style.display = 'none';
+      }
+    }
+
+    function clearSearchFilter() {
+      const searchInputs = document.querySelectorAll('.header-search-input');
+      searchInputs.forEach(function (input) {
+        input.value = '';
+      });
+      filterArticles('');
+      const url = new URL(window.location.href);
+      url.searchParams.delete('q');
+      window.history.replaceState({}, '', url.pathname);
+    }
+
+    function handleHeaderSearch(event) {
+      event.preventDefault();
+      const input = event.target.querySelector('input[type="search"]');
+      const q = input ? input.value : '';
+      filterArticles(q);
+      const url = new URL(window.location.href);
+      if (q) {
+        url.searchParams.set('q', q);
+      } else {
+        url.searchParams.delete('q');
+      }
+      window.history.replaceState({}, '', url.toString());
+    }
+
+    function escapeHtml(text) {
+      return text.replace(/[&<>"']/g, function (m) {
+        return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' })[m];
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Check URL query parameter 'q' on initial load
+      const urlParams = new URLSearchParams(window.location.search);
+      const initialQuery = urlParams.get('q');
+      if (initialQuery) {
+        filterArticles(initialQuery);
+      }
+
+      // Live search typing listener
+      const searchInput = document.getElementById('headerSearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', function (e) {
+          filterArticles(e.target.value);
+        });
+      }
+
+      // Select all 'Read More' buttons and article title links
+      const readMoreLinks = document.querySelectorAll('.read-more-btn, .article-card h2 a');
+
+      readMoreLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          const href = this.getAttribute('href') || '';
+          const match = href.match(/id=(\d+)/);
+          const articleId = match ? match[1] : (this.getAttribute('data-id') || '1');
+          
+          // Persist the selected article ID into sessionStorage
+          sessionStorage.setItem('selectedArticleId', articleId);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
