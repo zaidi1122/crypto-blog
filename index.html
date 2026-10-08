@@ -9,14 +9,14 @@
   <meta property="og:description" content="Discover institutional-grade cryptocurrency research, on-chain analytics, macro Bitcoin liquidity models, and educational decentralized finance deep dives on Cryptinff." />
   <meta property="og:type" content="website" />
   <style>
-    /* RESET & CORE PERFORMANCE OPTIMIZATION */
+    /* RESET & CORE BARE-METAL PERFORMANCE (0ms latency, zero external assets) */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: #f8fafc;
       color: #1e293b;
       line-height: 1.6;
@@ -33,7 +33,7 @@
       text-decoration: underline;
     }
 
-    /* HEADER & NAVIGATION */
+    /* HEADER & BRANDING */
     header.site-header {
       background-color: #ffffff;
       border-bottom: 1px solid #e2e8f0;
@@ -65,6 +65,13 @@
     .brand-logo:hover {
       text-decoration: none;
       color: #2563eb;
+    }
+    .brand-icon-svg {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: block;
+      flex-shrink: 0;
     }
 
     /* HEADER SEARCH BAR (TOPIC FILTER) */
@@ -166,7 +173,7 @@
       font-weight: 600;
     }
 
-    /* 3-COLUMN DESKTOP ARCHITECTURE (CONTAINER: 1200px) */
+    /* 3-COLUMN DESKTOP ARCHITECTURE (1200px) */
     .layout-container {
       max-width: 1200px;
       margin: 20px auto 40px auto;
@@ -221,7 +228,6 @@
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
     }
 
-    /* HOMEPAGE FEED HEADER */
     .feed-header {
       border-bottom: 2px solid #f1f5f9;
       padding-bottom: 20px;
@@ -251,15 +257,15 @@
       padding-bottom: 0;
     }
 
-    /* 1. TITLE */
+    /* 1. TITLE: Bold <h2> link pointing to 'article.html' using charcoal font configurations (#1e293b, 1.35rem) */
     .article-card h2 {
-      margin-bottom: 8px;
-      line-height: 1.35;
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 10px;
     }
     .article-card h2 a {
       color: #1e293b;
-      font-size: 1.35rem;
-      font-weight: 700;
       text-decoration: none;
       transition: color 0.15s ease;
     }
@@ -268,47 +274,52 @@
       text-decoration: underline;
     }
 
-    /* 2. META DATA STRING */
+    /* 2. META DATA STRING: Muted timestamp and categorical labels */
     .article-meta {
-      font-size: 0.88rem;
-      color: #64748b;
-      margin-bottom: 14px;
-      font-weight: 500;
       display: flex;
       align-items: center;
       gap: 8px;
+      font-size: 0.85rem;
+      color: #64748b;
+      font-weight: 500;
+      margin-bottom: 14px;
     }
     .category-tag {
       background-color: #eff6ff;
-      color: #1d4ed8;
-      padding: 2px 8px;
+      color: #2563eb;
+      padding: 3px 9px;
       border-radius: 4px;
       font-size: 0.8rem;
-      font-weight: 600;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
     }
 
-    /* 3. HIGH-RES IMAGE */
-    .article-image-container {
+    /* 3. GRAPHIC FRAME: Inline stylized SVG container block acting as the article's graphic banner */
+    .article-graphic-frame {
       width: 100%;
-      height: 270px;
-      border-radius: 6px;
+      height: 220px;
+      border-radius: 8px;
       overflow: hidden;
-      margin-bottom: 14px;
-      background-color: #f1f5f9;
+      margin-bottom: 16px;
+      background-color: #0b1329;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border: 1px solid #e2e8f0;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .article-img {
+    .article-card:hover .article-graphic-frame {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+    }
+    .article-graphic-frame svg {
       width: 100%;
       height: 100%;
-      object-fit: cover;
       display: block;
-      transition: transform 0.25s ease;
-    }
-    .article-card:hover .article-img {
-      transform: scale(1.015);
     }
 
-    /* 4. EXCERPT CONTEXT (3 CLEAN SENTENCES) */
+    /* 4. EXCERPT CONTENT: 3-line professional summary description paragraph */
     .article-excerpt {
       font-size: 0.98rem;
       color: #334155;
@@ -317,7 +328,7 @@
       text-align: justify;
     }
 
-    /* 5. IN-FEED AD UNIT SLOT */
+    /* 5. AD PLACEHOLDER: Clean dashed display border card reading [GOOGLE ADSENSE - IN-FEED AD CONTAINER] */
     .in-feed-ad-slot {
       width: 100%;
       min-height: 90px;
@@ -345,14 +356,14 @@
       color: #334155;
     }
 
-    /* 6. SAFETY ANTI-ACCIDENTAL CLICK GAP (EXACT 25PX SPACER) */
-    .safety-click-buffer {
+    /* 6. CUSHION SPACER: Clean 25px CSS layout margin block below ad placeholder to prevent accidental click errors */
+    .cushion-spacer {
       height: 25px;
       width: 100%;
       display: block;
     }
 
-    /* 7. CALL-TO-ACTION (DIRECT FAST BLUE #2563eb BUTTON) */
+    /* 7. ACTION COMPONENT: High-contrast blue (#2563eb) button targeting 'article.html' */
     .read-more-btn {
       display: inline-block;
       background-color: #2563eb;
@@ -448,7 +459,6 @@
       .header-inner {
         flex-wrap: wrap;
         gap: 12px;
-        padding: 12px 16px;
       }
       .header-search-form {
         order: 3;
@@ -463,39 +473,44 @@
         width: 100%;
         padding: 24px 18px;
       }
-      .article-card h2 a {
-        font-size: 1.25rem;
-      }
-      .article-image-container {
-        height: 200px;
-      }
       .ad-leaderboard-container {
         max-width: 100%;
-        min-height: 50px;
+        min-height: 60px;
         padding: 8px;
       }
       .ad-specs {
         font-size: 12px;
+      }
+      .article-card h2 {
+        font-size: 1.25rem;
+      }
+      .article-graphic-frame {
+        height: 180px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER NAVIGATION WITH INLINE BRAND SVG -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="index.html" class="brand-logo">
-        <img src="logo.svg" alt="Cryptinff Logo" width="34" height="34" style="border-radius: 6px; display: block;" />
-        <span>🪙 Cryptinff</span>
+      <a href="index.html" class="brand-logo" aria-label="Cryptinff Homepage">
+        <svg class="brand-icon-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="10" fill="#0f172a" />
+          <circle cx="24" cy="24" r="16" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="3 2" />
+          <circle cx="24" cy="24" r="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+          <path d="M21 17L27 24L21 31" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="27" cy="24" r="2.5" fill="#38bdf8" />
+        </svg>
+        <span>Cryptinff</span>
       </a>
 
       <!-- HEADER SEARCH BAR (TOPIC FILTER) -->
-      <form class="header-search-form" id="headerSearchForm" action="index.html" method="get" onsubmit="handleHeaderSearch(event)">
+      <form class="header-search-form" id="headerSearchForm" onsubmit="handleHeaderSearch(event)">
         <input 
           type="search" 
           id="headerSearchInput" 
-          name="q" 
           class="header-search-input" 
           placeholder="Search topics, tokens, guides..." 
           aria-label="Search articles" 
@@ -554,11 +569,11 @@
       <div id="noResultsBox" style="display: none; text-align: center; padding: 48px 20px; background-color: #f8fafc; border-radius: 8px; border: 1px dashed #cbd5e1; margin-bottom: 28px;">
         <div style="font-size: 2.2rem; margin-bottom: 12px;">🔍</div>
         <h3 style="font-size: 1.3rem; color: #1e293b; margin-bottom: 8px; font-weight: 700;">No articles matched your search</h3>
-        <p style="color: #64748b; max-width: 440px; margin: 0 auto 18px auto; font-size: 0.95rem;">We couldn't find any crypto guides or market analysis matching your query. Try searching for terms like "Bitcoin", "Ethereum", "Solana", or "DeFi".</p>
+        <p style="color: #64748b; max-width: 440px; margin: 0 auto 18px auto; font-size: 0.95rem;">We couldn't find any crypto guides matching your query. Try searching for terms like "Bitcoin", "Ethereum", "Solana", or "DeFi".</p>
         <button type="button" class="read-more-btn" onclick="clearSearchFilter()">View All 10 Articles</button>
       </div>
 
-      <!-- ARTICLE 1: BITCOIN -->
+      <!-- ARTICLE 1: BITCOIN MACRO TRENDS -->
       <article class="article-card">
         <h2><a href="article.html?id=1">Bitcoin Macro Trends &amp; Global Liquidity Cycles: Analyzing On-Chain SOPR and MVRV Ratios</a></h2>
         <div class="article-meta">
@@ -568,8 +583,34 @@
           <span>•</span>
           <span>8 min read</span>
         </div>
-        <div class="article-image-container">
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Bitcoin Macro Trends and Liquidity Cycles" class="article-img" loading="lazy" />
+        <div class="article-graphic-frame">
+          <svg viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="800" height="240" fill="#0b1329" />
+            <path d="M0 40H800M0 80H800M0 120H800M0 160H800M0 200H800" stroke="#1e293b" stroke-width="1" />
+            <path d="M100 0V240M200 0V240M300 0V240M400 0V240M500 0V240M600 0V240M700 0V240" stroke="#1e293b" stroke-width="1" opacity="0.5" />
+            <!-- Trend line and fill -->
+            <path d="M50 180 Q 150 170, 240 140 T 420 110 T 600 70 T 750 40 L 750 240 L 50 240 Z" fill="url(#btcGrad1)" opacity="0.3" />
+            <path d="M50 180 Q 150 170, 240 140 T 420 110 T 600 70 T 750 40" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+            <!-- Candlesticks -->
+            <rect x="220" y="125" width="14" height="35" rx="2" fill="#10b981" />
+            <line x1="227" y1="110" x2="227" y2="170" stroke="#10b981" stroke-width="2" />
+            <rect x="360" y="95" width="14" height="40" rx="2" fill="#10b981" />
+            <line x1="367" y1="80" x2="367" y2="150" stroke="#10b981" stroke-width="2" />
+            <rect x="490" y="70" width="14" height="30" rx="2" fill="#10b981" />
+            <line x1="497" y1="55" x2="497" y2="115" stroke="#10b981" stroke-width="2" />
+            <rect x="630" y="45" width="14" height="38" rx="2" fill="#10b981" />
+            <line x1="637" y1="30" x2="637" y2="95" stroke="#10b981" stroke-width="2" />
+            <!-- Bitcoin Emblem -->
+            <circle cx="120" cy="120" r="50" fill="#1e293b" stroke="#f59e0b" stroke-width="3" />
+            <circle cx="120" cy="120" r="42" fill="#0f172a" />
+            <path d="M112 95V145M118 95V145M106 104H125C130 104 134 107 134 112C134 116 131 119 127 120C132 121 136 125 136 130C136 136 131 139 125 139H106" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            <defs>
+              <linearGradient id="btcGrad1" x1="0" y1="0" x2="0" y2="240" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#f59e0b" stop-opacity="0.6"/>
+                <stop offset="1" stop-color="#0b1329" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
         <p class="article-excerpt">
           Global central bank M2 liquidity expansion continues to correlate with Bitcoin on-chain accumulation phases. The Spent Output Profit Ratio indicates that long-term holders are consistently defending psychological break-even baselines across premier exchanges. Derivatives open interest trends suggest market participants are anticipating a major high-timeframe volatility expansion.
@@ -578,11 +619,11 @@
           <div class="in-feed-ad-label">Advertisement</div>
           <div class="in-feed-ad-text">[GOOGLE ADSENSE - IN-FEED AD CONTAINER]</div>
         </div>
-        <div class="safety-click-buffer"></div>
+        <div class="cushion-spacer"></div>
         <a href="article.html?id=1" class="read-more-btn">Read More</a>
       </article>
 
-      <!-- ARTICLE 2: ETHEREUM & L2 -->
+      <!-- ARTICLE 2: ETHEREUM LAYER-2 -->
       <article class="article-card">
         <h2><a href="article.html?id=2">Ethereum Layer-2 Scaling Wars: Rollups, Calldata Compression, and Blob Space Economics</a></h2>
         <div class="article-meta">
@@ -592,8 +633,28 @@
           <span>•</span>
           <span>7 min read</span>
         </div>
-        <div class="article-image-container">
-          <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80" alt="Ethereum Layer-2 Scaling Wars and Data Blobs" class="article-img" loading="lazy" />
+        <div class="article-graphic-frame">
+          <svg viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="800" height="240" fill="#090d1f" />
+            <!-- Modular Rollup Blocks -->
+            <rect x="280" y="50" width="130" height="60" rx="8" fill="#1e1b4b" stroke="#6366f1" stroke-width="2" />
+            <text x="345" y="85" fill="#c7d2fe" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Blob Shard #1</text>
+            <rect x="440" y="50" width="130" height="60" rx="8" fill="#1e1b4b" stroke="#6366f1" stroke-width="2" />
+            <text x="505" y="85" fill="#c7d2fe" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Blob Shard #2</text>
+            <rect x="600" y="50" width="130" height="60" rx="8" fill="#1e1b4b" stroke="#6366f1" stroke-width="2" />
+            <text x="665" y="85" fill="#c7d2fe" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">ZK Proof Batch</text>
+            <!-- Settlement Conduit -->
+            <path d="M345 110 V 160 H 665" stroke="#38bdf8" stroke-width="3" stroke-dasharray="6 4" />
+            <rect x="300" y="150" width="410" height="50" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="2" />
+            <text x="505" y="180" fill="#38bdf8" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Ethereum L1 Base Settlement Layer</text>
+            <!-- Ethereum Rhombus Logo -->
+            <g transform="translate(130, 120)">
+              <polygon points="0,-65 42,-5 0,18" fill="#818cf8" opacity="0.9" />
+              <polygon points="0,-65 -42,-5 0,18" fill="#6366f1" />
+              <polygon points="0,26 42,7 0,65" fill="#818cf8" opacity="0.9" />
+              <polygon points="0,26 -42,7 0,65" fill="#6366f1" />
+            </g>
+          </svg>
         </div>
         <p class="article-excerpt">
           Proto-danksharding has reduced Layer-2 rollup settlement gas fees by more than ninety percent across major decentralized networks. Arbitrage bots and automated market makers now process high-frequency order flows with minimal transaction overhead. Total value locked across optimistic and zero-knowledge rollups continues to climb toward historic all-time highs.
@@ -602,155 +663,253 @@
           <div class="in-feed-ad-label">Advertisement</div>
           <div class="in-feed-ad-text">[GOOGLE ADSENSE - IN-FEED AD CONTAINER]</div>
         </div>
-        <div class="safety-click-buffer"></div>
+        <div class="cushion-spacer"></div>
         <a href="article.html?id=2" class="read-more-btn">Read More</a>
       </article>
 
-      <!-- ARTICLE 3: SOLANA -->
+      <!-- ARTICLE 3: SOLANA HIGH-THROUGHPUT -->
       <article class="article-card">
         <h2><a href="article.html?id=3">Solana Ecosystem Breakouts: High-Throughput Firedancer Client and Parallelized VM Efficiency</a></h2>
         <div class="article-meta">
           <span>Oct 5, 2026</span>
           <span>•</span>
-          <span class="category-tag">Solana &amp; L1</span>
+          <span class="category-tag">Layer 1 Architecture</span>
           <span>•</span>
           <span>6 min read</span>
         </div>
-        <div class="article-image-container">
-          <img src="https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=800&q=80" alt="Solana Parallel Execution and Firedancer Client" class="article-img" loading="lazy" />
+        <div class="article-graphic-frame">
+          <svg viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="800" height="240" fill="#031525" />
+            <defs>
+              <linearGradient id="solGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#14f195" />
+                <stop offset="100%" stop-color="#9945ff" />
+              </linearGradient>
+            </defs>
+            <!-- High throughput parallel pipelines -->
+            <rect x="260" y="50" width="480" height="28" rx="6" fill="#0f2b48" stroke="url(#solGrad)" stroke-width="2" />
+            <text x="500" y="69" fill="#14f195" font-size="12" font-weight="700" text-anchor="middle" font-family="sans-serif">Pipeline 01: Sealevel Parallel VM (55,000 TPS)</text>
+            <rect x="260" y="95" width="480" height="28" rx="6" fill="#0f2b48" stroke="url(#solGrad)" stroke-width="2" />
+            <text x="500" y="114" fill="#38bdf8" font-size="12" font-weight="700" text-anchor="middle" font-family="sans-serif">Pipeline 02: Turbine Block Propagation Engine</text>
+            <rect x="260" y="140" width="480" height="28" rx="6" fill="#0f2b48" stroke="url(#solGrad)" stroke-width="2" />
+            <text x="500" y="159" fill="#c084fc" font-size="12" font-weight="700" text-anchor="middle" font-family="sans-serif">Pipeline 03: Firedancer C++ Independent Validator</text>
+            <!-- Solana Stack Emblem -->
+            <g transform="translate(130, 75)">
+              <rect x="-60" y="0" width="120" height="18" rx="4" fill="url(#solGrad)" />
+              <rect x="-60" y="32" width="120" height="18" rx="4" fill="url(#solGrad)" />
+              <rect x="-60" y="64" width="120" height="18" rx="4" fill="url(#solGrad)" />
+            </g>
+          </svg>
         </div>
         <p class="article-excerpt">
-          The introduction of the C++ Firedancer validator client provides theoretical network throughput exceeding one million transactions per second. Parallelized transaction execution across independent account states prevents local decentralized exchange trading spikes from congesting unrelated consumer transfers. Institutional trading desks are increasingly leveraging low-latency order matching directly on-chain.
+          The deployment of the Firedancer independent validator client marks a defining turning point in Solana network redundancy. Decentralized exchange volumes have surpassed legacy centralized order books in spot retail turnover. Sub-second block times and deterministic execution continue to attract algorithmic high-frequency trading consortia.
         </p>
         <div class="in-feed-ad-slot">
           <div class="in-feed-ad-label">Advertisement</div>
           <div class="in-feed-ad-text">[GOOGLE ADSENSE - IN-FEED AD CONTAINER]</div>
         </div>
-        <div class="safety-click-buffer"></div>
+        <div class="cushion-spacer"></div>
         <a href="article.html?id=3" class="read-more-btn">Read More</a>
       </article>
 
-      <!-- ARTICLE 4: SEC & REGULATION -->
+      <!-- ARTICLE 4: ZERO-KNOWLEDGE PROOFS -->
       <article class="article-card">
-        <h2><a href="article.html?id=4">Ripple SEC Regulation Updates: Institutional Cross-Border Settlement and Legal Precedents</a></h2>
+        <h2><a href="article.html?id=4">Zero-Knowledge Proofs in Practice: zk-SNARKs, zk-STARKs, and Privacy-Preserving Compliance</a></h2>
         <div class="article-meta">
           <span>Oct 5, 2026</span>
           <span>•</span>
-          <span class="category-tag">SEC &amp; Law</span>
+          <span class="category-tag">Cryptography &amp; Privacy</span>
           <span>•</span>
-          <span>5 min read</span>
+          <span>9 min read</span>
         </div>
-        <div class="article-image-container">
-          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="Cryptocurrency Regulation and Court Precedents" class="article-img" loading="lazy" />
+        <div class="article-graphic-frame">
+          <svg viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="800" height="240" fill="#0d1117" />
+            <!-- Cryptographic Circuit Math Lattice -->
+            <circle cx="140" cy="120" r="50" fill="#161b22" stroke="#238636" stroke-width="3" />
+            <path d="M125 105 L155 135 M155 105 L125 135" stroke="#2ea043" stroke-width="4" stroke-linecap="round" />
+            <circle cx="140" cy="120" r="22" stroke="#56d364" stroke-width="2" stroke-dasharray="4 3" />
+            <!-- Polynomial Verification Channels -->
+            <rect x="260" y="60" width="220" height="120" rx="8" fill="#161b22" stroke="#30363d" stroke-width="2" />
+            <text x="370" y="95" fill="#7ee787" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Succinct zk-SNARK</text>
+            <text x="370" y="125" fill="#8b949e" font-size="12" text-anchor="middle" font-family="sans-serif">O(1) Verification Time</text>
+            <text x="370" y="150" fill="#58a6ff" font-size="11" text-anchor="middle" font-family="sans-serif">Polynomial Commitment</text>
+            <rect x="520" y="60" width="220" height="120" rx="8" fill="#161b22" stroke="#30363d" stroke-width="2" />
+            <text x="630" y="95" fill="#58a6ff" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Quantum-Resistant STARK</text>
+            <text x="630" y="125" fill="#8b949e" font-size="12" text-anchor="middle" font-family="sans-serif">No Trusted Setup Required</text>
+            <text x="630" y="150" fill="#7ee787" font-size="11" text-anchor="middle" font-family="sans-serif">FRI Low-Degree Test</text>
+          </svg>
         </div>
         <p class="article-excerpt">
-          Judicial clarity distinguishing secondary programmatic exchange trades from institutional investment contracts has established crucial precedent for digital asset markets. Commercial banking payment corridors continue expanding On-Demand Liquidity routing across cross-border settlement channels. Global regulatory jurisdictions are harmonizing statutory guidelines to integrate compliant digital currency infrastructure.
+          Mathematical verifiability without transaction detail leakage is fundamentally reshaping both institutional custody and compliance paradigms. Modern recursive proof generation enables hundreds of complex decentralized finance transactions to compress into a single cryptographic hash. Regulatory bodies are evaluating zero-knowledge audits for proof of solvency verification.
         </p>
         <div class="in-feed-ad-slot">
           <div class="in-feed-ad-label">Advertisement</div>
           <div class="in-feed-ad-text">[GOOGLE ADSENSE - IN-FEED AD CONTAINER]</div>
         </div>
-        <div class="safety-click-buffer"></div>
+        <div class="cushion-spacer"></div>
         <a href="article.html?id=4" class="read-more-btn">Read More</a>
       </article>
 
-      <!-- ARTICLE 5: AI AGENT TOKENS -->
+      <!-- ARTICLE 5: DECENTRALIZED FINANCE (DEFI) -->
       <article class="article-card">
-        <h2><a href="article.html?id=5">AI Agent Tokens &amp; Decentralized Compute: Decentralized GPU Clustering and Machine Economies</a></h2>
+        <h2><a href="article.html?id=5">DeFi Yield Dynamics: Liquidity Pool Mechanics, Impermanent Loss, and AMM Innovations</a></h2>
         <div class="article-meta">
           <span>Oct 4, 2026</span>
           <span>•</span>
-          <span class="category-tag">AI &amp; DePIN</span>
+          <span class="category-tag">Decentralized Finance</span>
           <span>•</span>
-          <span>6 min read</span>
+          <span>8 min read</span>
         </div>
-        <div class="article-image-container">
-          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="Artificial Intelligence Compute Clusters and Blockchain" class="article-img" loading="lazy" />
+        <div class="article-graphic-frame">
+          <svg viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="800" height="240" fill="#180e29" />
+            <!-- Constant Product Formula Bonding Curve x * y = k -->
+            <path d="M260 200 Q 320 180, 380 120 T 520 70 T 720 55" stroke="#ec4899" stroke-width="4" fill="none" />
+            <line x1="260" y1="200" x2="740" y2="200" stroke="#4c1d95" stroke-width="2" />
+            <line x1="260" y1="50" x2="260" y2="200" stroke="#4c1d95" stroke-width="2" />
+            <text x="500" y="110" fill="#f472b6" font-size="13" font-weight="700" font-family="sans-serif">Constant Product Formula: x • y = k</text>
+            <text x="500" y="140" fill="#c084fc" font-size="12" font-family="sans-serif">Concentrated Liquidity Tick Range Allocation</text>
+            <!-- Liquidity Pool Emblem -->
+            <circle cx="130" cy="120" r="52" fill="#2e1065" stroke="#ec4899" stroke-width="3" />
+            <path d="M105 130 C 115 100, 145 100, 155 130 C 145 150, 115 150, 105 130 Z" fill="#ec4899" opacity="0.8" />
+            <circle cx="130" cy="100" r="12" fill="#f472b6" />
+          </svg>
         </div>
         <p class="article-excerpt">
-          Decentralized physical infrastructure networks are pooling global enterprise GPU capacity to train foundation machine learning models. Autonomous software agents now execute real-time micropayments via Layer-2 smart contracts to lease decentralized compute time. The convergence of artificial intelligence inference with censorship-resistant cryptography eliminates reliance on centralized cloud server monopolies.
+          Concentrated liquidity market makers allow capital providers to focus assets within targeted pricing ranges, drastically boosting fee returns. Automated rebalancing vaults protect liquidity providers against impermanent loss during aggressive market swings. Synthetic stablecoin collateral frameworks are unlocking billions in idle lending capacity.
         </p>
         <div class="in-feed-ad-slot">
           <div class="in-feed-ad-label">Advertisement</div>
           <div class="in-feed-ad-text">[GOOGLE ADSENSE - IN-FEED AD CONTAINER]</div>
         </div>
-        <div class="safety-click-buffer"></div>
+        <div class="cushion-spacer"></div>
         <a href="article.html?id=5" class="read-more-btn">Read More</a>
       </article>
 
-      <!-- ARTICLE 6: DEFI STAKING -->
+      <!-- ARTICLE 6: REAL WORLD ASSETS (RWA) -->
       <article class="article-card">
-        <h2><a href="article.html?id=6">DeFi Staking Strategies: Restaking Yields, Liquid Staking Tokens, and Slashing Vector Mechanics</a></h2>
+        <h2><a href="article.html?id=6">Real-World Asset (RWA) Tokenization: Sovereign Debt, Real Estate, and Private Credit On-Chain</a></h2>
         <div class="article-meta">
           <span>Oct 4, 2026</span>
           <span>•</span>
-          <span class="category-tag">DeFi Analytics</span>
+          <span class="category-tag">Institutional Desk</span>
           <span>•</span>
           <span>7 min read</span>
         </div>
-        <div class="article-image-container">
-          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80" alt="Decentralized Finance Yield Curves and Staking" class="article-img" loading="lazy" />
+        <div class="article-graphic-frame">
+          <svg viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="800" height="240" fill="#0f1f1a" />
+            <!-- Treasury Pillars Vault Graphic -->
+            <g transform="translate(130, 120)">
+              <rect x="-45" y="-50" width="90" height="12" fill="#10b981" rx="2" />
+              <polygon points="0,-65 -50,-50 50,-50" fill="#059669" />
+              <rect x="-40" y="-35" width="16" height="70" fill="#10b981" />
+              <rect x="-8" y="-35" width="16" height="70" fill="#10b981" />
+              <rect x="24" y="-35" width="16" height="70" fill="#10b981" />
+              <rect x="-50" y="35" width="100" height="15" fill="#059669" rx="2" />
+            </g>
+            <!-- Tokenized Treasury Asset Modules -->
+            <rect x="260" y="55" width="480" height="50" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="2" />
+            <text x="500" y="85" fill="#a7f3d0" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">U.S. Treasury Bill Tokenization (4.85% APY Yield)</text>
+            <rect x="260" y="125" width="480" height="50" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.5" />
+            <text x="500" y="155" fill="#6ee7b7" font-size="13" font-weight="600" text-anchor="middle" font-family="sans-serif">Enterprise Private Credit &amp; Commercial Real Estate SPVs</text>
+          </svg>
         </div>
         <p class="article-excerpt">
-          Restaking protocols enable validators to secure secondary actively validated services while earning auxiliary staking yields. Layered liquidation risks and cascading slashing vectors require quantitative hedging models to protect underlying staked collateral. Liquid staking token liquidity depth across decentralized automated market makers remains a vital systemic risk indicator.
+          Over fifteen billion dollars in tokenized short-term United States Treasury obligations now circulate natively across public smart contract platforms. Institutional asset managers are minting permissioned debt tokens to enable 24/7 cross-border collateral settlement. Fractionalized real estate portfolios provide global retail investors with transparent passive income streams.
         </p>
         <div class="in-feed-ad-slot">
           <div class="in-feed-ad-label">Advertisement</div>
           <div class="in-feed-ad-text">[GOOGLE ADSENSE - IN-FEED AD CONTAINER]</div>
         </div>
-        <div class="safety-click-buffer"></div>
+        <div class="cushion-spacer"></div>
         <a href="article.html?id=6" class="read-more-btn">Read More</a>
       </article>
 
-      <!-- ARTICLE 7: STABLECOINS -->
+      <!-- ARTICLE 7: RESTAKING PROTOCOLS -->
       <article class="article-card">
-        <h2><a href="article.html?id=7">Stablecoin De-Pegging Risks: Algorithmic Vulnerabilities, Treasury Backing, and Fiat Collateral Health</a></h2>
+        <h2><a href="article.html?id=7">Restaking Protocols &amp; Shared Security: EigenLayer Mechanics and Slashing Risks</a></h2>
         <div class="article-meta">
           <span>Oct 3, 2026</span>
           <span>•</span>
-          <span class="category-tag">Stablecoins</span>
+          <span class="category-tag">Proof of Stake</span>
           <span>•</span>
-          <span>6 min read</span>
+          <span>8 min read</span>
         </div>
-        <div class="article-image-container">
-          <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80" alt="Stablecoin Reserve Collateral and Treasuries" class="article-img" loading="lazy" />
+        <div class="article-graphic-frame">
+          <svg viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="800" height="240" fill="#1e1808" />
+            <!-- Security Ring Topology -->
+            <circle cx="130" cy="120" r="55" fill="#2d220b" stroke="#eab308" stroke-width="3" />
+            <polygon points="130,80 165,135 95,135" fill="#facc15" opacity="0.8" />
+            <circle cx="130" cy="122" r="10" fill="#1e1808" />
+            <!-- Actively Validated Services (AVS) Routing -->
+            <rect x="260" y="55" width="145" height="120" rx="8" fill="#2d220b" stroke="#ca8a04" stroke-width="2" />
+            <text x="332" y="90" fill="#fef08a" font-size="13" font-weight="700" text-anchor="middle" font-family="sans-serif">AVS Node #1</text>
+            <text x="332" y="120" fill="#ca8a04" font-size="11" text-anchor="middle" font-family="sans-serif">Oracle Feeds</text>
+            <text x="332" y="145" fill="#facc15" font-size="11" text-anchor="middle" font-family="sans-serif">Dual Quorum</text>
+            <rect x="430" y="55" width="145" height="120" rx="8" fill="#2d220b" stroke="#ca8a04" stroke-width="2" />
+            <text x="502" y="90" fill="#fef08a" font-size="13" font-weight="700" text-anchor="middle" font-family="sans-serif">AVS Node #2</text>
+            <text x="502" y="120" fill="#ca8a04" font-size="11" text-anchor="middle" font-family="sans-serif">Data Availability</text>
+            <text x="502" y="145" fill="#facc15" font-size="11" text-anchor="middle" font-family="sans-serif">Shared Sec</text>
+            <rect x="600" y="55" width="145" height="120" rx="8" fill="#2d220b" stroke="#ca8a04" stroke-width="2" />
+            <text x="672" y="90" fill="#fef08a" font-size="13" font-weight="700" text-anchor="middle" font-family="sans-serif">AVS Node #3</text>
+            <text x="672" y="120" fill="#ca8a04" font-size="11" text-anchor="middle" font-family="sans-serif">Fast Bridges</text>
+            <text x="672" y="145" fill="#facc15" font-size="11" text-anchor="middle" font-family="sans-serif">Slashing Model</text>
+          </svg>
         </div>
         <p class="article-excerpt">
-          Fully reserved fiat-backed stablecoins are capturing institutional market share through audited short-dated sovereign Treasury backing. Algorithmic and synthetic delta-neutral currency designs face acute stress during sudden liquidity contraction periods. Real-time on-chain proof-of-reserves attestations are rapidly becoming the mandatory regulatory benchmark for global payment issuers.
+          Restaking enables Ethereum validators to extend their economic security guarantees to oracles, bridges, and data availability systems. Actively Validated Services leverage established validator sets to avoid launching volatile new native network tokens. Rigorous dual-quorum governance models are emerging to isolate and eliminate cascading slashing events.
         </p>
         <div class="in-feed-ad-slot">
           <div class="in-feed-ad-label">Advertisement</div>
           <div class="in-feed-ad-text">[GOOGLE ADSENSE - IN-FEED AD CONTAINER]</div>
         </div>
-        <div class="safety-click-buffer"></div>
+        <div class="cushion-spacer"></div>
         <a href="article.html?id=7" class="read-more-btn">Read More</a>
       </article>
 
-      <!-- ARTICLE 8: WEB3 GAMING -->
+      <!-- ARTICLE 8: DEPIN -->
       <article class="article-card">
-        <h2><a href="article.html?id=8">Web3 Gaming Realities: Play-to-Own Tokenomics, Account Abstraction, and Player Retention</a></h2>
+        <h2><a href="article.html?id=8">DePIN Infrastructure: Decentralized Physical Networks Powering Wireless, Compute, and Sensor Grids</a></h2>
         <div class="article-meta">
           <span>Oct 3, 2026</span>
           <span>•</span>
-          <span class="category-tag">Web3 Gaming</span>
+          <span class="category-tag">Infrastructure</span>
           <span>•</span>
-          <span>5 min read</span>
+          <span>6 min read</span>
         </div>
-        <div class="article-image-container">
-          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="Web3 Video Games and Digital Asset Ownership" class="article-img" loading="lazy" />
+        <div class="article-graphic-frame">
+          <svg viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="800" height="240" fill="#071b26" />
+            <!-- Wireless Mesh Radio & Sensor Nodes -->
+            <circle cx="130" cy="120" r="45" fill="#0c2d40" stroke="#06b6d4" stroke-width="3" />
+            <path d="M130 90 A30 30 0 0 1 160 120 M130 80 A40 40 0 0 1 170 120 M130 70 A50 50 0 0 1 180 120" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" fill="none" />
+            <circle cx="130" cy="120" r="8" fill="#38bdf8" />
+            <!-- DePIN Compute Array -->
+            <rect x="250" y="55" width="225" height="120" rx="8" fill="#0c2d40" stroke="#0891b2" stroke-width="2" />
+            <text x="362" y="90" fill="#a5f3fc" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Decentralized GPU Grid</text>
+            <text x="362" y="120" fill="#67e8f9" font-size="12" text-anchor="middle" font-family="sans-serif">AI Inference Clusters</text>
+            <text x="362" y="145" fill="#38bdf8" font-size="11" text-anchor="middle" font-family="sans-serif">Low-Latency Compute</text>
+            <rect x="500" y="55" width="240" height="120" rx="8" fill="#0c2d40" stroke="#0891b2" stroke-width="2" />
+            <text x="620" y="90" fill="#a5f3fc" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Decentralized 5G &amp; IoT</text>
+            <text x="620" y="120" fill="#67e8f9" font-size="12" text-anchor="middle" font-family="sans-serif">Crowdsourced Sensor Grids</text>
+            <text x="620" y="145" fill="#38bdf8" font-size="11" text-anchor="middle" font-family="sans-serif">Zero-Overhead Topology</text>
+          </svg>
         </div>
         <p class="article-excerpt">
-          Blockchain gaming economies are transitioning away from hyper-inflationary reward tokens toward sustainable play-to-own models. Account abstraction and gasless session keys allow mainstream players to interact without complex private key management. True digital ownership of in-game items fosters active player-driven secondary trade volume.
+          Decentralized physical infrastructure networks reward hardware operators with cryptographic tokens for contributing cellular bandwidth and graphics compute. Machine learning training clusters are sourcing high-performance GPU capacity from decentralized data center networks. Community-owned mapping sensors provide enterprise mapping services with real-time accuracy.
         </p>
         <div class="in-feed-ad-slot">
           <div class="in-feed-ad-label">Advertisement</div>
           <div class="in-feed-ad-text">[GOOGLE ADSENSE - IN-FEED AD CONTAINER]</div>
         </div>
-        <div class="safety-click-buffer"></div>
+        <div class="cushion-spacer"></div>
         <a href="article.html?id=8" class="read-more-btn">Read More</a>
       </article>
 
-      <!-- ARTICLE 9: CROSS-CHAIN -->
+      <!-- ARTICLE 9: CROSS-CHAIN BRIDGES -->
       <article class="article-card">
         <h2><a href="article.html?id=9">Cross-Chain Bridges &amp; Interoperability: Zero-Knowledge Relayers vs Trust-Minimized Message Passing</a></h2>
         <div class="article-meta">
@@ -760,8 +919,22 @@
           <span>•</span>
           <span>7 min read</span>
         </div>
-        <div class="article-image-container">
-          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Blockchain Network Infrastructure and Cross-Chain Bridges" class="article-img" loading="lazy" />
+        <div class="article-graphic-frame">
+          <svg viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="800" height="240" fill="#141124" />
+            <!-- Bridge Arch Vector -->
+            <path d="M100 170 Q 400 30, 700 170" stroke="#a855f7" stroke-width="5" fill="none" />
+            <line x1="100" y1="170" x2="700" y2="170" stroke="#3b0764" stroke-width="3" />
+            <circle cx="200" cy="140" r="10" fill="#c084fc" />
+            <circle cx="400" cy="100" r="14" fill="#d8b4fe" />
+            <circle cx="600" cy="140" r="10" fill="#c084fc" />
+            <!-- Chain Node Endpoints -->
+            <rect x="70" y="145" width="80" height="45" rx="6" fill="#2e1065" stroke="#9333ea" stroke-width="2" />
+            <text x="110" y="172" fill="#e9d5ff" font-size="12" font-weight="700" text-anchor="middle" font-family="sans-serif">Source L1</text>
+            <rect x="650" y="145" width="80" height="45" rx="6" fill="#2e1065" stroke="#9333ea" stroke-width="2" />
+            <text x="690" y="172" fill="#e9d5ff" font-size="12" font-weight="700" text-anchor="middle" font-family="sans-serif">Dest L2</text>
+            <text x="400" y="70" fill="#f3e8ff" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Trust-Minimized State Relayer</text>
+          </svg>
         </div>
         <p class="article-excerpt">
           Zero-knowledge light clients enable trust-minimized state verification between sovereign blockchains without relying on multi-signature committees. Liquidity pools powered by intent-based relayer networks reduce capital lockup while mitigating historical bridge exploit vectors. Universal messaging standards are unifying fragmented liquidity across disparate Layer-1 and Layer-2 networks.
@@ -770,7 +943,7 @@
           <div class="in-feed-ad-label">Advertisement</div>
           <div class="in-feed-ad-text">[GOOGLE ADSENSE - IN-FEED AD CONTAINER]</div>
         </div>
-        <div class="safety-click-buffer"></div>
+        <div class="cushion-spacer"></div>
         <a href="article.html?id=9" class="read-more-btn">Read More</a>
       </article>
 
@@ -784,8 +957,21 @@
           <span>•</span>
           <span>6 min read</span>
         </div>
-        <div class="article-image-container">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Institutional Finance and Asset Custody Architecture" class="article-img" loading="lazy" />
+        <div class="article-graphic-frame">
+          <svg viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="800" height="240" fill="#0f172a" />
+            <!-- Institutional Cold Vault Chassis -->
+            <rect x="90" y="50" width="160" height="140" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="3" />
+            <circle cx="170" cy="110" r="32" fill="#0f172a" stroke="#60a5fa" stroke-width="3" />
+            <line x1="170" y1="90" x2="170" y2="130" stroke="#60a5fa" stroke-width="3" />
+            <line x1="150" y1="110" x2="190" y2="110" stroke="#60a5fa" stroke-width="3" />
+            <text x="170" y="165" fill="#93c5fd" font-size="12" font-weight="700" text-anchor="middle" font-family="sans-serif">MPC Vault</text>
+            <!-- ETF Brokerage Flow -->
+            <rect x="290" y="55" width="440" height="55" rx="8" fill="#1e293b" stroke="#2563eb" stroke-width="2" />
+            <text x="510" y="87" fill="#bfdbfe" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Wall Street Spot ETF Inflows (+$850M Daily)</text>
+            <rect x="290" y="125" width="440" height="55" rx="8" fill="#1e293b" stroke="#1d4ed8" stroke-width="2" />
+            <text x="510" y="157" fill="#93c5fd" font-size="13" font-weight="600" text-anchor="middle" font-family="sans-serif">Corporate Treasury Allocations &amp; Sovereign Wealth Funds</text>
+          </svg>
         </div>
         <p class="article-excerpt">
           Spot exchange-traded fund inflows across Wall Street brokerage accounts continue absorbing physical Bitcoin and Ethereum supply. Corporate balance sheets are adopting modern fair-value accounting frameworks to report digital asset holdings accurately. Multi-party computation cold storage vaults ensure enterprise-grade security for institutional asset managers.
@@ -794,7 +980,7 @@
           <div class="in-feed-ad-label">Advertisement</div>
           <div class="in-feed-ad-text">[GOOGLE ADSENSE - IN-FEED AD CONTAINER]</div>
         </div>
-        <div class="safety-click-buffer"></div>
+        <div class="cushion-spacer"></div>
         <a href="article.html?id=10" class="read-more-btn">Read More</a>
       </article>
 
@@ -814,7 +1000,11 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-logo">
-        <img src="logo.svg" alt="Cryptinff Logo" width="30" height="30" style="border-radius: 6px; display: block;" />
+        <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="8" fill="#1e293b" />
+          <circle cx="24" cy="24" r="14" stroke="#2563eb" stroke-width="2" />
+          <path d="M21 17L27 24L21 31" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
         <span>Cryptinff</span>
       </div>
       <p style="max-width: 650px; margin: 0 auto; font-size: 0.9rem; color: #cbd5e1;">
@@ -823,7 +1013,7 @@
       
       <div class="footer-links">
         <a href="index.html">Home</a>
-        <a href="article.html">Single Article</a>
+        <a href="article.html">Guides</a>
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="disclaimer.html">Disclaimer</a>
         <a href="terms.html">Terms of Service</a>
@@ -853,7 +1043,7 @@
     </div>
   </footer>
 
-  <!-- SCRIPT: PERSIST SELECTED ARTICLE ID & SEARCH TOPIC FILTER -->
+  <!-- SCRIPT: PERSIST SELECTED ARTICLE ID & SEARCH TOPIC FILTER (100% SELF-CONTAINED) -->
   <script>
     function filterArticles(query) {
       const q = (query || '').trim().toLowerCase();
@@ -930,14 +1120,12 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-      // Check URL query parameter 'q' on initial load
       const urlParams = new URLSearchParams(window.location.search);
       const initialQuery = urlParams.get('q');
       if (initialQuery) {
         filterArticles(initialQuery);
       }
 
-      // Live search typing listener
       const searchInput = document.getElementById('headerSearchInput');
       if (searchInput) {
         searchInput.addEventListener('input', function (e) {
@@ -945,16 +1133,12 @@
         });
       }
 
-      // Select all 'Read More' buttons and article title links
       const readMoreLinks = document.querySelectorAll('.read-more-btn, .article-card h2 a');
-
       readMoreLinks.forEach(function (link) {
-        link.addEventListener('click', function (event) {
+        link.addEventListener('click', function () {
           const href = this.getAttribute('href') || '';
           const match = href.match(/id=(\d+)/);
           const articleId = match ? match[1] : (this.getAttribute('data-id') || '1');
-          
-          // Persist the selected article ID into sessionStorage
           sessionStorage.setItem('selectedArticleId', articleId);
         });
       });

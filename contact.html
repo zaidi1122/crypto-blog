@@ -64,6 +64,13 @@
       text-decoration: none;
       color: #2b6cb0;
     }
+    .brand-icon-svg {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: block;
+      flex-shrink: 0;
+    }
     nav.header-nav {
       display: flex;
       gap: 24px;
@@ -482,7 +489,13 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="brand-logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-        <img src="logo.svg" alt="Cryptinff Logo" width="34" height="34" style="border-radius: 6px; display: block;" />
+        <svg class="brand-icon-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="10" fill="#0f172a" />
+          <circle cx="24" cy="24" r="16" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="3 2" />
+          <circle cx="24" cy="24" r="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+          <path d="M21 17L27 24L21 31" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="27" cy="24" r="2.5" fill="#38bdf8" />
+        </svg>
         <span style="font-size: 1.45rem; font-weight: 800; color: #1a365d; letter-spacing: -0.5px;">Cryptinff</span>
       </a>
 
@@ -646,7 +659,11 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-logo" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px;">
-        <img src="logo.svg" alt="Cryptinff Logo" width="30" height="30" style="border-radius: 6px; display: block;" />
+        <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="8" fill="#1e293b" />
+          <circle cx="24" cy="24" r="14" stroke="#2563eb" stroke-width="2" />
+          <path d="M21 17L27 24L21 31" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
         <span style="font-size: 1.4rem; font-weight: 800; color: #ffffff;">Cryptinff</span>
       </div>
       <p style="max-width: 650px; margin: 0 auto; font-size: 0.9rem; color: #cbd5e0;">
