@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us - Cryptinff | Editorial &amp; Advertising Inquiries</title>
-  <meta name="description" content="Get in touch with the editorial board, compliance team, and publishers of Cryptinff. Official contact form, administrative email, and corporate presence." />
-  <meta property="og:title" content="Contact Us - Cryptinff" />
-  <meta property="og:description" content="Get in touch with the editorial board, compliance team, and publishers of Cryptinff." />
+  <meta name="description" content="Get in touch with the editorial board, compliance team, and publishers of Cryptinff Media Network at cryptinff.xyz. Official contact form, administrative email, and editorial bureau details." />
+  <meta property="og:title" content="Contact Us - Cryptinff Media Network" />
+  <meta property="og:description" content="Editorial desk, compliance officers, and reader support for Cryptinff Media Network (cryptinff.xyz)." />
   <meta property="og:type" content="website" />
   <style>
     /* RESET & CORE BASE STYLES */
@@ -16,20 +16,20 @@
       padding: 0;
     }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #f7f9fb;
-      color: #2d3748;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
       line-height: 1.65;
       font-size: 16px;
       -webkit-font-smoothing: antialiased;
     }
     a {
-      color: #3182ce;
+      color: #2563eb;
       text-decoration: none;
-      transition: color 0.2s ease;
+      transition: color 0.15s ease;
     }
     a:hover {
-      color: #2b6cb0;
+      color: #1d4ed8;
       text-decoration: underline;
     }
 
@@ -37,7 +37,7 @@
     header.site-header {
       background-color: #ffffff;
       border-bottom: 1px solid #e2e8f0;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -45,10 +45,11 @@
     .header-inner {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 16px 24px;
+      padding: 14px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 16px;
     }
     .brand-logo {
       display: flex;
@@ -56,13 +57,14 @@
       gap: 10px;
       font-size: 1.5rem;
       font-weight: 800;
-      color: #1a365d;
+      color: #0f172a;
       letter-spacing: -0.5px;
       text-decoration: none;
+      flex-shrink: 0;
     }
     .brand-logo:hover {
       text-decoration: none;
-      color: #2b6cb0;
+      color: #2563eb;
     }
     .brand-icon-svg {
       width: 32px;
@@ -71,49 +73,31 @@
       display: block;
       flex-shrink: 0;
     }
-    nav.header-nav {
-      display: flex;
-      gap: 24px;
-      align-items: center;
-    }
-    nav.header-nav a {
-      color: #4a5568;
-      font-weight: 600;
-      font-size: 0.95rem;
-      padding: 6px 10px;
-      border-radius: 4px;
-      transition: all 0.2s ease;
-      text-decoration: none;
-    }
-    nav.header-nav a:hover, nav.header-nav a.active {
-      color: #3182ce;
-      background-color: #ebf8ff;
-    }
 
     /* HEADER SEARCH BAR */
     .header-search-form {
       display: flex;
       align-items: center;
       position: relative;
-      flex: 0 1 290px;
+      flex: 0 1 300px;
       margin: 0 12px;
     }
     .header-search-input {
       width: 100%;
-      padding: 7px 36px 7px 14px;
+      padding: 8px 36px 8px 14px;
       font-size: 0.9rem;
       border: 1px solid #cbd5e0;
       border-radius: 20px;
       background-color: #f8fafc;
-      color: #2d3748;
+      color: #1e293b;
       outline: none;
       transition: all 0.2s ease;
       font-family: inherit;
     }
     .header-search-input:focus {
       background-color: #ffffff;
-      border-color: #3182ce;
-      box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
     }
     .header-search-btn {
       position: absolute;
@@ -127,14 +111,34 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #718096;
-      transition: color 0.2s ease;
+      color: #64748b;
+      transition: color 0.15s ease;
     }
     .header-search-btn:hover {
-      color: #3182ce;
+      color: #2563eb;
     }
 
-    /* TOP LEADERBOARD AD ZONE */
+    nav.header-nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    nav.header-nav a {
+      color: #475569;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.15s ease;
+      text-decoration: none;
+    }
+    nav.header-nav a:hover, nav.header-nav a.active {
+      color: #2563eb;
+      background-color: #eff6ff;
+    }
+
+    /* TOP RESPONSIVE LEADERBOARD AD */
     .leaderboard-wrapper {
       max-width: 1200px;
       margin: 18px auto 6px auto;
@@ -145,8 +149,8 @@
       max-width: 728px;
       min-height: 90px;
       margin: 0 auto;
-      background-color: #edf2f7;
-      border: 1px dashed #cbd5e0;
+      background-color: #f1f5f9;
+      border: 1px dashed #cbd5e1;
       border-radius: 6px;
       display: flex;
       flex-direction: column;
@@ -159,235 +163,219 @@
       font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #718096;
+      letter-spacing: 0.8px;
+      color: #64748b;
       margin-bottom: 4px;
     }
     .ad-specs {
       font-size: 13px;
-      color: #4a5568;
       font-weight: 600;
+      color: #334155;
     }
 
-    /* 3-COLUMN DESKTOP ARCHITECTURE */
+    /* 3-COLUMN LAYOUT */
     .layout-container {
       max-width: 1200px;
       margin: 20px auto 40px auto;
-      padding: 0 16px;
+      padding: 0 20px;
       display: flex;
       gap: 24px;
       align-items: flex-start;
     }
 
-    /* FIXED STICKY SKYSCRAPERS */
-    .sidebar-skyscraper {
+    /* SIDEBAR SKYSCRAPERS */
+    aside.sidebar-skyscraper {
       width: 160px;
       flex-shrink: 0;
     }
     .sticky-ad-box {
       position: sticky;
-      top: 90px;
+      top: 80px;
       width: 160px;
       height: 600px;
-      background-color: #edf2f7;
-      border: 1px dashed #cbd5e0;
+      background-color: #f1f5f9;
+      border: 1px dashed #cbd5e1;
       border-radius: 6px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 16px 8px;
       text-align: center;
+      padding: 12px;
+      box-sizing: border-box;
     }
     .skyscraper-label {
       font-size: 11px;
       font-weight: 700;
-      color: #718096;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.8px;
+      color: #64748b;
       margin-bottom: 8px;
     }
     .skyscraper-dimensions {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 600;
-      color: #4a5568;
+      color: #334155;
+      line-height: 1.4;
     }
 
-    /* CENTER MAIN CONTENT COLUMN */
+    /* CENTER COLUMN */
     main.center-column {
       flex: 1;
       min-width: 0;
       background-color: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 8px;
-      padding: 40px 48px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+      padding: 36px 32px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
     }
-
-    /* CONTACT CONTENT STYLES */
-    .contact-header {
-      border-bottom: 2px solid #edf2f7;
-      padding-bottom: 20px;
-      margin-bottom: 30px;
-    }
-    .contact-header h1 {
+    .page-title {
       font-size: 2.1rem;
-      color: #1a202c;
       font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.5px;
       line-height: 1.25;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
-    .contact-intro {
-      font-size: 1.05rem;
-      color: #4a5568;
+    .page-meta {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #e2e8f0;
     }
 
-    /* 2-COLUMN CONTACT INFO & FORM */
+    /* CONTACT GRID */
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 36px;
-      margin-top: 24px;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 32px;
+      margin-top: 16px;
     }
-
-    /* DIRECT CONTACT DETAILS CARD */
     .contact-info-panel {
       background-color: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 8px;
-      padding: 28px;
+      padding: 24px;
     }
     .contact-info-panel h2 {
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       font-weight: 700;
-      color: #1a202c;
+      color: #0f172a;
       margin-bottom: 18px;
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 8px;
     }
     .info-item {
       margin-bottom: 20px;
     }
     .info-label {
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: #718096;
+      letter-spacing: 0.5px;
+      color: #64748b;
       margin-bottom: 4px;
     }
     .info-value {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #2d3748;
-    }
-    .info-value a {
-      color: #3182ce;
+      font-size: 0.98rem;
+      color: #1e293b;
       font-weight: 600;
       word-break: break-all;
     }
-    .social-links-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 8px;
-    }
-    .social-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background-color: #ffffff;
-      border: 1px solid #cbd5e0;
-      color: #2d3748;
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-size: 0.88rem;
-      font-weight: 600;
-      transition: all 0.2s ease;
-      text-decoration: none;
-    }
-    .social-badge:hover {
-      background-color: #ebf8ff;
-      border-color: #3182ce;
-      color: #2b6cb0;
-      text-decoration: none;
+    .trust-verification-box {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 14px 16px;
+      border-radius: 4px;
+      margin: 18px 0;
+      font-size: 0.92rem;
+      color: #1e40af;
+      line-height: 1.55;
     }
 
-    /* CONTACT FORM */
+    /* FORM STYLES */
     .contact-form-panel {
-      display: flex;
-      flex-direction: column;
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 24px;
     }
     .contact-form-panel h2 {
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       font-weight: 700;
-      color: #1a202c;
+      color: #0f172a;
       margin-bottom: 18px;
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 8px;
     }
     .form-group {
       margin-bottom: 18px;
     }
     .form-group label {
       display: block;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 600;
-      color: #2d3748;
+      color: #334155;
       margin-bottom: 6px;
     }
     .form-control {
       width: 100%;
       padding: 10px 14px;
-      font-size: 0.95rem;
-      border: 1px solid #cbd5e0;
+      border: 1px solid #cbd5e1;
       border-radius: 6px;
-      font-family: inherit;
-      color: #2d3748;
+      font-size: 0.95rem;
+      color: #1e293b;
       background-color: #ffffff;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      outline: none;
+      transition: all 0.2s ease;
+      font-family: inherit;
     }
     .form-control:focus {
-      outline: none;
-      border-color: #3182ce;
-      box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
     }
     textarea.form-control {
       min-height: 130px;
       resize: vertical;
     }
     .submit-btn {
-      background-color: #3182ce;
+      display: inline-block;
+      width: 100%;
+      background-color: #2563eb;
       color: #ffffff;
+      padding: 12px 24px;
       border: none;
       border-radius: 6px;
-      padding: 12px 24px;
       font-size: 1rem;
       font-weight: 700;
       cursor: pointer;
-      transition: background-color 0.2s ease, transform 0.1s ease;
-      align-self: flex-start;
+      transition: background-color 0.2s ease;
+      text-align: center;
     }
     .submit-btn:hover {
-      background-color: #2b6cb0;
-      transform: translateY(-1px);
-    }
-    .submit-btn:active {
-      transform: translateY(0);
-    }
-    .form-success-banner {
-      display: none;
-      background-color: #f0fff4;
-      border: 1px solid #9ae6b4;
-      color: #22543d;
-      padding: 16px;
-      border-radius: 6px;
-      margin-bottom: 20px;
-      font-size: 0.95rem;
+      background-color: #1d4ed8;
     }
 
-    /* FOOTER & BOTTOM AD ZONES */
+    /* FORM SUCCESS BANNER */
+    .form-success-banner {
+      display: none;
+      background-color: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* FOOTER */
     footer.site-footer {
-      background-color: #1a365d;
+      background-color: #0f172a;
       color: #e2e8f0;
       padding: 40px 24px 30px 24px;
-      border-top: 1px solid #2a4365;
+      border-top: 1px solid #1e293b;
     }
     .footer-inner {
       max-width: 1200px;
@@ -399,7 +387,9 @@
       font-weight: 800;
       color: #ffffff;
       margin-bottom: 12px;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
     }
     .footer-links {
       display: flex;
@@ -409,7 +399,7 @@
       margin: 18px 0 24px 0;
     }
     .footer-links a {
-      color: #cbd5e0;
+      color: #cbd5e1;
       font-size: 0.92rem;
       font-weight: 500;
       text-decoration: none;
@@ -420,17 +410,15 @@
     }
     .footer-copy {
       font-size: 0.88rem;
-      color: #a0aec0;
+      color: #94a3b8;
       margin-bottom: 24px;
     }
-
-    /* FOOTER ANCHOR AD UNIT */
     .footer-anchor-ad-container {
       max-width: 728px;
       min-height: 90px;
       margin: 0 auto;
-      background-color: #2a4365;
-      border: 1px dashed #4a5568;
+      background-color: #1e293b;
+      border: 1px dashed #475569;
       border-radius: 6px;
       display: flex;
       flex-direction: column;
@@ -439,26 +427,10 @@
       padding: 12px;
       text-align: center;
     }
-    .footer-anchor-ad-container .ad-badge {
-      color: #e2e8f0;
-    }
-    .footer-anchor-ad-container .ad-specs {
-      color: #ffffff;
-    }
 
-    /* RESPONSIVE BREAKPOINT - MOBILE & TABLET REFLOW (<= 992px) */
     @media (max-width: 992px) {
-      .sidebar-skyscraper {
+      aside.sidebar-skyscraper {
         display: none !important;
-      }
-      .header-inner {
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-      .header-search-form {
-        order: 3;
-        flex: 1 1 100%;
-        margin: 6px 0 0 0;
       }
       .layout-container {
         padding: 0 16px;
@@ -470,15 +442,11 @@
       }
       .contact-grid {
         grid-template-columns: 1fr;
-        gap: 24px;
       }
-      .ad-leaderboard-container {
-        max-width: 100%;
-        min-height: 60px;
-        padding: 8px;
-      }
-      .ad-specs {
-        font-size: 12px;
+      .header-search-form {
+        order: 3;
+        flex: 1 1 100%;
+        margin: 6px 0 0 0;
       }
     }
   </style>
@@ -488,7 +456,7 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="index.html" class="brand-logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+      <a href="index.html" class="brand-logo">
         <svg class="brand-icon-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="48" height="48" rx="10" fill="#0f172a" />
           <circle cx="24" cy="24" r="16" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="3 2" />
@@ -496,10 +464,10 @@
           <path d="M21 17L27 24L21 31" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
           <circle cx="27" cy="24" r="2.5" fill="#38bdf8" />
         </svg>
-        <span style="font-size: 1.45rem; font-weight: 800; color: #1a365d; letter-spacing: -0.5px;">Cryptinff</span>
+        <span>Cryptinff</span>
       </a>
 
-      <!-- HEADER SEARCH BAR (NAVIGATES TO HOMEPAGE WITH FILTER QUERY) -->
+      <!-- HEADER SEARCH BAR -->
       <form class="header-search-form" id="headerSearchForm" action="index.html" method="get">
         <input 
           type="search" 
@@ -520,7 +488,7 @@
 
       <nav class="header-nav">
         <a href="index.html">Home</a>
-        <a href="article.html">Guides</a>
+        <a href="bitcoin-macro-trends.html">Guides</a>
         <a href="index.html">Markets</a>
         <a href="contact.html" class="active">Contact</a>
       </nav>
@@ -546,13 +514,13 @@
       </div>
     </aside>
 
-    <!-- MAIN CENTER COLUMN CONTENT -->
+    <!-- CENTER FLUID MAIN CONTENT COLUMN -->
     <main class="center-column">
-      <div class="contact-header">
-        <h1>Contact Editorial &amp; Administration</h1>
-        <p class="contact-intro">
-          We welcome inquiries from readers, researchers, institutions, and press agencies. Have questions regarding a published market analysis, copyright matter, or programmatic partnership? Get in touch with our verified team below.
-        </p>
+      <h1 class="page-title">Editorial Office &amp; Business Inquiries</h1>
+      <div class="page-meta">
+        <span>Response Window: 24 to 48 Business Hours</span>
+        <span>•</span>
+        <span>Administrative Infrastructure: cryptinff.xyz</span>
       </div>
 
       <!-- SUCCESS CONFIRMATION BANNER -->
@@ -568,20 +536,20 @@
           <div class="info-item">
             <div class="info-label">Primary Administrative Correspondence</div>
             <div class="info-value">
-              <a href="mailto:contactt@cryptinff.com">contactt@cryptinff.com</a>
+              <a href="mailto:contactt@cryptinff.xyz">contactt@cryptinff.xyz</a>
             </div>
           </div>
 
           <div class="info-item">
             <div class="info-label">Technical &amp; Reader Support Desk</div>
             <div class="info-value">
-              <a href="mailto:support@cryptinff.com">support@cryptinff.com</a>
+              <a href="mailto:support@cryptinff.xyz">support@cryptinff.xyz</a>
             </div>
           </div>
 
-          <!-- HIGH TRUST VERIFICATION NOTE (RULE 1) -->
-          <div class="trust-verification-box" style="background-color: #ebf8ff; border-left: 4px solid #3182ce; padding: 14px 16px; border-radius: 4px; margin: 18px 0; font-size: 0.92rem; color: #2b6cb0; line-height: 1.55;">
-            <strong>Verification Notice:</strong> Official administrative correspondence for Cryptinff Media Network is handled exclusively through our encrypted domain servers at cryptinff.com.
+          <!-- HIGH TRUST VERIFICATION NOTE -->
+          <div class="trust-verification-box">
+            <strong>Verification Notice:</strong> Official administrative correspondence for Cryptinff Media Network is handled exclusively through our encrypted domain servers at cryptinff.xyz.
           </div>
 
           <div class="info-item">
@@ -594,17 +562,9 @@
           </div>
 
           <div class="info-item">
-            <div class="info-label">Official Social &amp; Verification Channels</div>
-            <div class="social-links-grid">
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-badge">
-                𝕏 @CryptinffNews
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-badge">
-                💼 LinkedIn / Cryptinff
-              </a>
-              <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="social-badge">
-                ✈️ Telegram / CryptinffOfficial
-              </a>
+            <div class="info-label">Domain Infrastructure</div>
+            <div class="info-value">
+              Network Portal: <a href="https://cryptinff.xyz">cryptinff.xyz</a>
             </div>
           </div>
         </div>
@@ -614,28 +574,22 @@
           <h2>Send Us an Inquiry</h2>
           <form id="contactForm" onsubmit="handleContactSubmit(event)">
             <div class="form-group">
-              <label for="fullName">Full Legal Name *</label>
+              <label for="fullName">Full Name *</label>
               <input type="text" id="fullName" class="form-control" placeholder="e.g. Satoshi Nakamoto" required />
             </div>
 
             <div class="form-group">
-              <label for="emailAddress">Direct Email Address *</label>
-              <input type="email" id="emailAddress" class="form-control" placeholder="e.g. name@company.com" required />
+              <label for="emailAddress">Active Email *</label>
+              <input type="email" id="emailAddress" class="form-control" placeholder="e.g. yourname@domain.xyz" required />
             </div>
 
             <div class="form-group">
-              <label for="inquiryTopic">Inquiry Category *</label>
-              <select id="inquiryTopic" class="form-control" required>
-                <option value="Editorial Feedback">Editorial / Research Question</option>
-                <option value="Advertising">Advertising &amp; Sponsorship Inquiries</option>
-                <option value="Legal & Compliance">Legal / Compliance / AdSense Inquiry</option>
-                <option value="Press Releases">Press Release / Media Pitch</option>
-                <option value="Technical Support">Technical Platform Inquiries</option>
-              </select>
+              <label for="inquirySubject">Subject *</label>
+              <input type="text" id="inquirySubject" class="form-control" placeholder="e.g. Technical Research Feedback or Ad Inquiries" required />
             </div>
 
             <div class="form-group">
-              <label for="messageBody">Detailed Message *</label>
+              <label for="messageBody">Textarea Message *</label>
               <textarea id="messageBody" class="form-control" placeholder="Please articulate your questions, sources, or proposal with clarity..." required></textarea>
             </div>
 
@@ -658,36 +612,36 @@
   <!-- FOOTER SECTION -->
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-logo" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px;">
+      <div class="footer-logo">
         <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="48" height="48" rx="8" fill="#1e293b" />
           <circle cx="24" cy="24" r="14" stroke="#2563eb" stroke-width="2" />
           <path d="M21 17L27 24L21 31" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        <span style="font-size: 1.4rem; font-weight: 800; color: #ffffff;">Cryptinff</span>
+        <span>Cryptinff</span>
       </div>
-      <p style="max-width: 650px; margin: 0 auto; font-size: 0.9rem; color: #cbd5e0;">
+      <p style="max-width: 650px; margin: 0 auto; font-size: 0.9rem; color: #cbd5e1;">
         Independent institutional-grade cryptocurrency research, real-time blockchain analytics, and macro digital asset insights.
       </p>
       
       <div class="footer-links">
         <a href="index.html">Home</a>
-        <a href="article.html">Single Article</a>
+        <a href="bitcoin-macro-trends.html">Guides</a>
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="disclaimer.html">Disclaimer</a>
         <a href="terms.html">Terms of Service</a>
         <a href="contact.html">Contact Us</a>
       </div>
 
-      <!-- BUSINESS EMAIL DEPLOYMENT & TRUST VERIFICATION NOTE (RULE 1) -->
-      <div style="margin: 14px 0 10px 0; font-size: 0.92rem; color: #cbd5e0;">
+      <!-- BUSINESS EMAIL DEPLOYMENT & TRUST VERIFICATION NOTE -->
+      <div style="margin: 14px 0 10px 0; font-size: 0.92rem; color: #cbd5e1;">
         <span>Direct Inquiries: </span>
-        <a href="mailto:support@cryptinff.com" style="color: #63b3ed; font-weight: 600; text-decoration: none;">support@cryptinff.com</a>
-        <span style="margin: 0 8px; color: #718096;">•</span>
-        <a href="mailto:contactt@cryptinff.com" style="color: #63b3ed; font-weight: 600; text-decoration: none;">contactt@cryptinff.com</a>
+        <a href="mailto:support@cryptinff.xyz" style="color: #60a5fa; font-weight: 600; text-decoration: none;">support@cryptinff.xyz</a>
+        <span style="margin: 0 8px; color: #64748b;">•</span>
+        <a href="mailto:contactt@cryptinff.xyz" style="color: #60a5fa; font-weight: 600; text-decoration: none;">contactt@cryptinff.xyz</a>
       </div>
-      <p style="font-size: 0.84rem; color: #a0aec0; max-width: 720px; margin: 0 auto 18px auto; line-height: 1.5;">
-        Official administrative correspondence for Cryptinff Media Network is handled exclusively through our encrypted domain servers at cryptinff.com.
+      <p style="font-size: 0.84rem; color: #94a3b8; max-width: 720px; margin: 0 auto 18px auto; line-height: 1.5;">
+        Official administrative correspondence for Cryptinff Media Network is handled exclusively through our encrypted domain servers at cryptinff.xyz.
       </p>
 
       <div class="footer-copy">
@@ -705,20 +659,20 @@
   <script>
     function handleContactSubmit(event) {
       event.preventDefault();
-      const form = document.getElementById('contactForm');
-      const banner = document.getElementById('contactSuccessBanner');
-      const submitBtn = document.getElementById('submitBtn');
-
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Transmitting Message...';
+      var banner = document.getElementById('contactSuccessBanner');
+      var form = document.getElementById('contactForm');
+      var btn = document.getElementById('submitBtn');
+      
+      btn.textContent = 'Transmitting Message...';
+      btn.disabled = true;
 
       setTimeout(function() {
-        form.reset();
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Inbound Message';
         banner.style.display = 'block';
+        form.reset();
+        btn.textContent = 'Send Inbound Message';
+        btn.disabled = false;
         banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 700);
+      }, 500);
     }
   </script>
 

@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms and Conditions - Cryptinff | Legal Site Usage Agreement</title>
-  <meta name="description" content="Terms and Conditions of Use for Cryptinff. Read our user agreement, intellectual property protection policies, and liability limitations." />
+  <meta name="description" content="Terms and Conditions of Use for Cryptinff Media Network at cryptinff.xyz. Read our user agreement, intellectual property protection policies, and liability limitations." />
   <meta property="og:title" content="Terms and Conditions - Cryptinff" />
-  <meta property="og:description" content="Official Terms and Conditions of Use governing Cryptinff." />
+  <meta property="og:description" content="Legal Terms of Service and Intellectual Property guidelines for Cryptinff Media Network (cryptinff.xyz)." />
   <meta property="og:type" content="website" />
   <style>
     /* RESET & CORE BASE STYLES */
@@ -16,20 +16,20 @@
       padding: 0;
     }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #f7f9fb;
-      color: #2d3748;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
       line-height: 1.65;
       font-size: 16px;
       -webkit-font-smoothing: antialiased;
     }
     a {
-      color: #3182ce;
+      color: #2563eb;
       text-decoration: none;
-      transition: color 0.2s ease;
+      transition: color 0.15s ease;
     }
     a:hover {
-      color: #2b6cb0;
+      color: #1d4ed8;
       text-decoration: underline;
     }
 
@@ -37,7 +37,7 @@
     header.site-header {
       background-color: #ffffff;
       border-bottom: 1px solid #e2e8f0;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -45,10 +45,11 @@
     .header-inner {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 16px 24px;
+      padding: 14px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 16px;
     }
     .brand-logo {
       display: flex;
@@ -56,13 +57,14 @@
       gap: 10px;
       font-size: 1.5rem;
       font-weight: 800;
-      color: #1a365d;
+      color: #0f172a;
       letter-spacing: -0.5px;
       text-decoration: none;
+      flex-shrink: 0;
     }
     .brand-logo:hover {
       text-decoration: none;
-      color: #2b6cb0;
+      color: #2563eb;
     }
     .brand-icon-svg {
       width: 32px;
@@ -71,49 +73,31 @@
       display: block;
       flex-shrink: 0;
     }
-    nav.header-nav {
-      display: flex;
-      gap: 24px;
-      align-items: center;
-    }
-    nav.header-nav a {
-      color: #4a5568;
-      font-weight: 600;
-      font-size: 0.95rem;
-      padding: 6px 10px;
-      border-radius: 4px;
-      transition: all 0.2s ease;
-      text-decoration: none;
-    }
-    nav.header-nav a:hover, nav.header-nav a.active {
-      color: #3182ce;
-      background-color: #ebf8ff;
-    }
 
     /* HEADER SEARCH BAR */
     .header-search-form {
       display: flex;
       align-items: center;
       position: relative;
-      flex: 0 1 290px;
+      flex: 0 1 300px;
       margin: 0 12px;
     }
     .header-search-input {
       width: 100%;
-      padding: 7px 36px 7px 14px;
+      padding: 8px 36px 8px 14px;
       font-size: 0.9rem;
       border: 1px solid #cbd5e0;
       border-radius: 20px;
       background-color: #f8fafc;
-      color: #2d3748;
+      color: #1e293b;
       outline: none;
       transition: all 0.2s ease;
       font-family: inherit;
     }
     .header-search-input:focus {
       background-color: #ffffff;
-      border-color: #3182ce;
-      box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
     }
     .header-search-btn {
       position: absolute;
@@ -127,14 +111,34 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #718096;
-      transition: color 0.2s ease;
+      color: #64748b;
+      transition: color 0.15s ease;
     }
     .header-search-btn:hover {
-      color: #3182ce;
+      color: #2563eb;
     }
 
-    /* TOP LEADERBOARD AD ZONE */
+    nav.header-nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    nav.header-nav a {
+      color: #475569;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.15s ease;
+      text-decoration: none;
+    }
+    nav.header-nav a:hover, nav.header-nav a.active {
+      color: #2563eb;
+      background-color: #eff6ff;
+    }
+
+    /* TOP RESPONSIVE LEADERBOARD AD */
     .leaderboard-wrapper {
       max-width: 1200px;
       margin: 18px auto 6px auto;
@@ -145,8 +149,8 @@
       max-width: 728px;
       min-height: 90px;
       margin: 0 auto;
-      background-color: #edf2f7;
-      border: 1px dashed #cbd5e0;
+      background-color: #f1f5f9;
+      border: 1px dashed #cbd5e1;
       border-radius: 6px;
       display: flex;
       flex-direction: column;
@@ -159,120 +163,119 @@
       font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #718096;
+      letter-spacing: 0.8px;
+      color: #64748b;
       margin-bottom: 4px;
     }
     .ad-specs {
       font-size: 13px;
-      color: #4a5568;
       font-weight: 600;
+      color: #334155;
     }
 
-    /* 3-COLUMN DESKTOP ARCHITECTURE */
+    /* 3-COLUMN LAYOUT */
     .layout-container {
       max-width: 1200px;
       margin: 20px auto 40px auto;
-      padding: 0 16px;
+      padding: 0 20px;
       display: flex;
       gap: 24px;
       align-items: flex-start;
     }
 
-    /* FIXED STICKY SKYSCRAPERS */
-    .sidebar-skyscraper {
+    /* SIDEBAR SKYSCRAPERS */
+    aside.sidebar-skyscraper {
       width: 160px;
       flex-shrink: 0;
     }
     .sticky-ad-box {
       position: sticky;
-      top: 90px;
+      top: 80px;
       width: 160px;
       height: 600px;
-      background-color: #edf2f7;
-      border: 1px dashed #cbd5e0;
+      background-color: #f1f5f9;
+      border: 1px dashed #cbd5e1;
       border-radius: 6px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 16px 8px;
       text-align: center;
+      padding: 12px;
+      box-sizing: border-box;
     }
     .skyscraper-label {
       font-size: 11px;
       font-weight: 700;
-      color: #718096;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.8px;
+      color: #64748b;
       margin-bottom: 8px;
     }
     .skyscraper-dimensions {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 600;
-      color: #4a5568;
+      color: #334155;
+      line-height: 1.4;
     }
 
-    /* CENTER MAIN CONTENT COLUMN */
+    /* CENTER COLUMN */
     main.center-column {
       flex: 1;
       min-width: 0;
       background-color: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 8px;
-      padding: 40px 48px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+      padding: 36px 32px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
     }
-
-    /* CONTENT TYPOGRAPHY & LEGAL SECTIONS */
-    .legal-header {
-      border-bottom: 2px solid #edf2f7;
-      padding-bottom: 20px;
-      margin-bottom: 30px;
-    }
-    .legal-header h1 {
+    .page-title {
       font-size: 2.1rem;
-      color: #1a202c;
       font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.5px;
       line-height: 1.25;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
-    .legal-date {
+    .page-meta {
       font-size: 0.9rem;
-      color: #718096;
-      font-weight: 500;
+      color: #64748b;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
     .legal-body h2 {
       font-size: 1.35rem;
-      color: #2d3748;
       font-weight: 700;
-      margin-top: 28px;
-      margin-bottom: 12px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid #f0f4f8;
+      color: #0f172a;
+      margin: 28px 0 12px 0;
+      line-height: 1.35;
     }
     .legal-body p {
-      margin-bottom: 16px;
-      color: #4a5568;
       font-size: 1rem;
+      color: #334155;
       line-height: 1.7;
+      margin-bottom: 16px;
+      text-align: justify;
     }
     .legal-body ul {
-      margin-left: 24px;
-      margin-bottom: 20px;
-      color: #4a5568;
+      margin: 12px 0 20px 24px;
+      color: #334155;
     }
     .legal-body li {
       margin-bottom: 8px;
       line-height: 1.6;
     }
 
-    /* FOOTER & BOTTOM AD ZONES */
+    /* FOOTER */
     footer.site-footer {
-      background-color: #1a365d;
+      background-color: #0f172a;
       color: #e2e8f0;
       padding: 40px 24px 30px 24px;
-      border-top: 1px solid #2a4365;
+      border-top: 1px solid #1e293b;
     }
     .footer-inner {
       max-width: 1200px;
@@ -284,7 +287,9 @@
       font-weight: 800;
       color: #ffffff;
       margin-bottom: 12px;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
     }
     .footer-links {
       display: flex;
@@ -294,7 +299,7 @@
       margin: 18px 0 24px 0;
     }
     .footer-links a {
-      color: #cbd5e0;
+      color: #cbd5e1;
       font-size: 0.92rem;
       font-weight: 500;
       text-decoration: none;
@@ -305,17 +310,15 @@
     }
     .footer-copy {
       font-size: 0.88rem;
-      color: #a0aec0;
+      color: #94a3b8;
       margin-bottom: 24px;
     }
-
-    /* FOOTER ANCHOR AD UNIT */
     .footer-anchor-ad-container {
       max-width: 728px;
       min-height: 90px;
       margin: 0 auto;
-      background-color: #2a4365;
-      border: 1px dashed #4a5568;
+      background-color: #1e293b;
+      border: 1px dashed #475569;
       border-radius: 6px;
       display: flex;
       flex-direction: column;
@@ -324,26 +327,10 @@
       padding: 12px;
       text-align: center;
     }
-    .footer-anchor-ad-container .ad-badge {
-      color: #e2e8f0;
-    }
-    .footer-anchor-ad-container .ad-specs {
-      color: #ffffff;
-    }
 
-    /* RESPONSIVE BREAKPOINT - MOBILE & TABLET REFLOW (<= 992px) */
     @media (max-width: 992px) {
-      .sidebar-skyscraper {
+      aside.sidebar-skyscraper {
         display: none !important;
-      }
-      .header-inner {
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-      .header-search-form {
-        order: 3;
-        flex: 1 1 100%;
-        margin: 6px 0 0 0;
       }
       .layout-container {
         padding: 0 16px;
@@ -353,13 +340,10 @@
         width: 100%;
         padding: 24px 20px;
       }
-      .ad-leaderboard-container {
-        max-width: 100%;
-        min-height: 60px;
-        padding: 8px;
-      }
-      .ad-specs {
-        font-size: 12px;
+      .header-search-form {
+        order: 3;
+        flex: 1 1 100%;
+        margin: 6px 0 0 0;
       }
     }
   </style>
@@ -369,7 +353,7 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="index.html" class="brand-logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+      <a href="index.html" class="brand-logo">
         <svg class="brand-icon-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="48" height="48" rx="10" fill="#0f172a" />
           <circle cx="24" cy="24" r="16" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="3 2" />
@@ -377,10 +361,10 @@
           <path d="M21 17L27 24L21 31" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
           <circle cx="27" cy="24" r="2.5" fill="#38bdf8" />
         </svg>
-        <span style="font-size: 1.45rem; font-weight: 800; color: #1a365d; letter-spacing: -0.5px;">Cryptinff</span>
+        <span>Cryptinff</span>
       </a>
 
-      <!-- HEADER SEARCH BAR (NAVIGATES TO HOMEPAGE WITH FILTER QUERY) -->
+      <!-- HEADER SEARCH BAR -->
       <form class="header-search-form" id="headerSearchForm" action="index.html" method="get">
         <input 
           type="search" 
@@ -401,7 +385,7 @@
 
       <nav class="header-nav">
         <a href="index.html">Home</a>
-        <a href="article.html">Guides</a>
+        <a href="bitcoin-macro-trends.html">Guides</a>
         <a href="index.html">Markets</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -427,88 +411,70 @@
       </div>
     </aside>
 
-    <!-- MAIN CENTER COLUMN CONTENT -->
+    <!-- CENTER FLUID MAIN CONTENT COLUMN -->
     <main class="center-column">
-      <article class="legal-content">
-        <div class="legal-header">
-          <h1>Terms and Conditions of Use</h1>
-          <div class="legal-date">Last Updated: October 6, 2026 • Effective Worldwide</div>
+      <article>
+        <h1 class="page-title">Terms of Service &amp; User Agreement</h1>
+        <div class="page-meta">
+          <span>Effective Date: October 9, 2026</span>
+          <span>•</span>
+          <span>Governing Law: Jurisdiction of Delaware, USA</span>
+          <span>•</span>
+          <span>Operator: Cryptinff Media Network (cryptinff.xyz)</span>
         </div>
 
         <div class="legal-body">
           <p>
-            Welcome to <strong>Cryptinff</strong>. By visiting, browsing, or utilizing the services and research feeds provided on this website, you signify that you have read, understood, and agreed to be bound by these Terms and Conditions ("Terms"), alongside our <a href="privacy-policy.html">Privacy Policy</a> and <a href="disclaimer.html">Financial Disclaimer</a>.
-          </p>
-          <p>
-            If you do not agree with any part of these terms, you are expressly prohibited from using this website and must discontinue use immediately.
+            Welcome to <strong>Cryptinff</strong> (cryptinff.xyz). By accessing, viewing, or interacting with our publications, analytics repositories, and technical educational articles, you signify that you have read, understood, and agreed to be legally bound by these Terms of Service.
           </p>
 
-          <h2>1. Acceptance of Terms &amp; Eligibility</h2>
+          <h2>1. Permitted Website Usage and Reader Conduct</h2>
           <p>
-            By accessing Cryptinff, you warrant and represent that you are at least 18 years of age or the age of majority in your legal jurisdiction, and possess the legal capacity to enter into this legally binding agreement.
-          </p>
-
-          <h2>2. Intellectual Property Rights</h2>
-          <p>
-            Unless explicitly noted otherwise, all original content, editorial writings, deep-dive market breakdowns, cryptographic explanations, charts, graphics, code structures, branding logos, and visual arrangements published on Cryptinff are the exclusive proprietary property of Cryptinff and are protected by international copyright, trademark, and intellectual property treaties.
+            Cryptinff grants you a personal, non-exclusive, non-transferable, revocable license to access and interact with our public research content solely for non-commercial, personal informational purposes. As a condition of access, you agree that you will not:
           </p>
           <ul>
-            <li><strong>Limited Personal License:</strong> You are granted a non-exclusive, non-transferable, revocable license to access and read our content solely for private, non-commercial educational purposes.</li>
-            <li><strong>Prohibited Actions:</strong> You may not systematically reproduce, republish, syndicate, scrape, redistribute, or commercially exploit any text or analytical data from Cryptinff without prior explicit written permission from our editorial board.</li>
-            <li><strong>Attribution Rule:</strong> Brief quotations (under 100 words) are permissible provided that explicit editorial credit and a direct, do-follow hyperlink back to the original article on Cryptinff are prominently displayed.</li>
+            <li>Deploy automated scrapers, web spiders, or automated crawlers that disrupt server bandwidth or cause denial of service.</li>
+            <li>Bypass, reverse engineer, or tamper with security protocols, header verifications, or ad-delivery networks.</li>
+            <li>Republish, syndicate, or mirror entire research articles without explicit written permission from our editorial board.</li>
+            <li>Use the site in violation of applicable securities laws, sanctions compliance mandates, or intellectual property protections.</li>
           </ul>
 
-          <h2>3. Acceptable User Conduct &amp; Prohibited Activities</h2>
+          <h2>2. Intellectual Property Protection of Editorial Streams</h2>
           <p>
-            When interacting with Cryptinff, you agree that you will not engage in any activity that interferes with or disrupts the security, performance, or integrity of the platform. You expressly agree not to:
-          </p>
-          <ul>
-            <li>Deploy automated crawlers, bots, scrapers, or data extraction scripts designed to siphon content or overload server resources.</li>
-            <li>Engage in simulated click fraud, artificial traffic generation, or invalid automated activity targeting programmatic advertisements (including Google AdSense display units) deployed on the platform.</li>
-            <li>Transmit malicious code, viruses, Trojan horses, or any other destructive software artifacts.</li>
-            <li>Attempt unauthorized access to our content management systems, backend servers, or connected cloud databases.</li>
-            <li>Post spam, unsolicited promotional messages, phishing links, or fraudulent token promotions through any interactive contact forms.</li>
-          </ul>
-
-          <h2>4. Disclaimer of Warranties</h2>
-          <p>
-            Cryptinff is provided strictly on an <strong>"AS IS" and "AS AVAILABLE"</strong> basis without warranties or representations of any kind, either express or implied.
+            All text, research narratives, original SVG vector infographics, proprietary chart layouts, layout stylesheets, and source code distributed on <strong>cryptinff.xyz</strong> are the exclusive intellectual property of Cryptinff Media Network LLC and are protected by international copyright, trademark, and trade secret conventions.
           </p>
           <p>
-            To the fullest extent permitted under applicable law, Cryptinff disclaims all warranties, including but not limited to implied warranties of merchantability, fitness for a particular financial purpose, non-infringement, accuracy, uninterrupted uptime, and freedom from computer errors or server downtime.
+            Brief excerpts or data citations are permitted under fair use doctrine, provided clear, clickable attribution linking directly to the original article on <strong>cryptinff.xyz</strong> is visibly displayed.
           </p>
 
-          <h2>5. Limitation of Liability</h2>
+          <h2>3. Disclaimers of Warranties</h2>
           <p>
-            In no event shall Cryptinff, its managing directors, editors, writers, employees, or partners be liable to you or any third party for any direct, indirect, incidental, punitive, consequential, or special damages of any kind, including but not limited to lost crypto portfolio capital, missed trading profits, exchange insolvency losses, technical hardware failure, or business interruption, arising out of or related to your use of this website.
+            Cryptinff is provided strictly on an <strong>"as is" and "as available" basis</strong>. To the fullest extent permissible by applicable law, Cryptinff disclaims all warranties, express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, non-infringement, or freedom from computer viruses or network interruptions.
           </p>
 
-          <h2>6. Third-Party Links &amp; Advertisements</h2>
+          <h2>4. Limitation of Liability</h2>
           <p>
-            Cryptinff displays advertisements (including Google AdSense display inventory) and may contain hyperlinks to third-party cryptocurrency websites, decentralized exchanges, and external educational portals.
-          </p>
-          <p>
-            These external platforms operate entirely outside of our control. The presence of a link or advertisement does not signify our endorsement of the third-party provider, its cryptographic assets, or its security standards. You access external services entirely at your own discretion and peril.
+            In no event shall Cryptinff Media Network, its executives, directors, analysts, or contributors be held liable for any direct, indirect, consequential, punitive, or special damages arising out of your inability to access, or reliance upon, data streams published on this website. This limitation applies whether based in contract, tort, strict liability, or any other legal theory.
           </p>
 
-          <h2>7. Indemnification</h2>
+          <h2>5. Programmatic Advertising Compliance</h2>
           <p>
-            You agree to defend, indemnify, and hold harmless Cryptinff, its affiliates, licensors, officers, and agents against any claims, losses, liabilities, damages, costs, and expenses (including reasonable attorney fees) arising from your breach of these Terms, your misuse of the site, or your violation of any applicable financial regulations.
+            Cryptinff participates in Google AdSense and third-party advertising partner programs. Ads presented on cryptinff.xyz are managed through automated programmatic algorithms. You agree not to engage in artificial ad engagement, coordinated click manipulations, or malicious ad injection while browsing our web pages.
           </p>
 
-          <h2>8. Governing Law &amp; Dispute Resolution</h2>
+          <h2>6. Termination of Access</h2>
           <p>
-            These Terms of Service and any dispute or claim arising out of or in connection with them shall be governed by and construed in accordance with the substantive laws of the State of Delaware, United States, without giving effect to any principles of conflicts of law.
+            We reserve the right, without prior notice or liability, to terminate or suspend your access to cryptinff.xyz for conduct that violates these Terms of Service, harms other readers, or breaches applicable cybercrime statutes.
           </p>
 
-          <h2>9. Amendments and Modifications</h2>
+          <h2>7. Applicable Law and Jurisdiction</h2>
           <p>
-            Cryptinff reserves the right, at its sole discretion, to modify or replace these Terms at any time. Updated versions become immediately enforceable upon being posted to this page. Continued utilization of our platform following revisions constitutes full acceptance of the revised Terms.
+            These Terms of Service and any dispute arising from your use of this site shall be governed by and construed in accordance with the substantive laws of the State of Delaware, United States, without giving effect to conflicts of law principles.
           </p>
 
-          <h2>10. Administrative Inquiries</h2>
+          <h2>8. Administrative and Legal Inquiries</h2>
           <p>
-            For questions or legal notifications regarding these Terms and Conditions, please submit your formal inquiry to <a href="mailto:contactt@cryptinff.com">contactt@cryptinff.com</a> or our technical desk at <a href="mailto:support@cryptinff.com">support@cryptinff.com</a>.
+            For legal notices, DMCA copyright filings, or terms inquiries, please contact our legal desk at <a href="mailto:contactt@cryptinff.xyz">contactt@cryptinff.xyz</a> or administrative support at <a href="mailto:support@cryptinff.xyz">support@cryptinff.xyz</a>.
           </p>
         </div>
       </article>
@@ -527,36 +493,36 @@
   <!-- FOOTER SECTION -->
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-logo" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px;">
+      <div class="footer-logo">
         <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="48" height="48" rx="8" fill="#1e293b" />
           <circle cx="24" cy="24" r="14" stroke="#2563eb" stroke-width="2" />
           <path d="M21 17L27 24L21 31" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        <span style="font-size: 1.4rem; font-weight: 800; color: #ffffff;">Cryptinff</span>
+        <span>Cryptinff</span>
       </div>
-      <p style="max-width: 650px; margin: 0 auto; font-size: 0.9rem; color: #cbd5e0;">
+      <p style="max-width: 650px; margin: 0 auto; font-size: 0.9rem; color: #cbd5e1;">
         Independent institutional-grade cryptocurrency research, real-time blockchain analytics, and macro digital asset insights.
       </p>
       
       <div class="footer-links">
         <a href="index.html">Home</a>
-        <a href="article.html">Single Article</a>
+        <a href="bitcoin-macro-trends.html">Guides</a>
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="disclaimer.html">Disclaimer</a>
         <a href="terms.html">Terms of Service</a>
         <a href="contact.html">Contact Us</a>
       </div>
 
-      <!-- BUSINESS EMAIL DEPLOYMENT & TRUST VERIFICATION NOTE (RULE 1) -->
-      <div style="margin: 14px 0 10px 0; font-size: 0.92rem; color: #cbd5e0;">
+      <!-- BUSINESS EMAIL DEPLOYMENT & TRUST VERIFICATION NOTE -->
+      <div style="margin: 14px 0 10px 0; font-size: 0.92rem; color: #cbd5e1;">
         <span>Direct Inquiries: </span>
-        <a href="mailto:support@cryptinff.com" style="color: #63b3ed; font-weight: 600; text-decoration: none;">support@cryptinff.com</a>
-        <span style="margin: 0 8px; color: #718096;">•</span>
-        <a href="mailto:contactt@cryptinff.com" style="color: #63b3ed; font-weight: 600; text-decoration: none;">contactt@cryptinff.com</a>
+        <a href="mailto:support@cryptinff.xyz" style="color: #60a5fa; font-weight: 600; text-decoration: none;">support@cryptinff.xyz</a>
+        <span style="margin: 0 8px; color: #64748b;">•</span>
+        <a href="mailto:contactt@cryptinff.xyz" style="color: #60a5fa; font-weight: 600; text-decoration: none;">contactt@cryptinff.xyz</a>
       </div>
-      <p style="font-size: 0.84rem; color: #a0aec0; max-width: 720px; margin: 0 auto 18px auto; line-height: 1.5;">
-        Official administrative correspondence for Cryptinff Media Network is handled exclusively through our encrypted domain servers at cryptinff.com.
+      <p style="font-size: 0.84rem; color: #94a3b8; max-width: 720px; margin: 0 auto 18px auto; line-height: 1.5;">
+        Official administrative correspondence for Cryptinff Media Network is handled exclusively through our encrypted domain servers at cryptinff.xyz.
       </p>
 
       <div class="footer-copy">
